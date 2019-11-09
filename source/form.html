@@ -7,40 +7,30 @@
 </head>
 
 <body>
-  <header class="page-header">
-    <nav class="page-header__nav main-nav">
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item"><a href="./index.html">Главная</a></li>
-          <li class="main-nav__item"><a href="./photo.html">Фото и видео</a></li>
-          <li class="main-nav__item"><a>Форма отзыва</a></li><!-- href="./form.html" -->
-          <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
-        </ul>
-        <button class="main-nav__close button" type="button">Закрыть меню</button>
-      </div>
+  <header class="header">
+    <nav class="header__nav main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="./index.html">Главная</a></li>
+        <li class="main-nav__item"><a href="./photo.html">Фото и видео</a></li>
+        <li class="main-nav__item"><a>Форма отзыва</a></li> <!-- href="./form.html" -->
+        <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+      </ul>
+      <button class="header__menu button" type="button"><span class="button__icon button__icon--menu"></span>Меню сайта</button>
     </nav>
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="./img/place-holder--150x150.png" width="102" height="83"
-        alt="Логотип «Sedona»">
+    <a class="header__logo" aria-label="Ссылка на главную страницу" href="./index.html">
+      <img class="header__logo-image" src="./img/place-holder--150x150.png" width="102" height="83" alt="Логотип Седона">
     </a>
-    <button class="page-header__menu button" type="button">Открыть меню</button>
   </header>
-  <main class="page-main">
+  <main class="main">
     <h1 class="visually-hidden">Содержимое страницы обратной связи</h1>
-    <section class="intro-main">
-      <h2 class="visually-hidden">Intro блок «Sedona»</h2>
-      <div class="intro-main__wrapper">
-        <div class="intro-main__intro intro-block">
-          <!-- svg без слогана, краткая версия -->
-          <img class="intro-block__picture" src="./img/place-holder--150x150.png" width="100%" height="160"
-            alt="«Sedona»">
-        </div>
-        <div class="intro-main__info info-block">
-          <p class="info-block__title"><strong>Оставьте свой отзыв</strong></p>
-          <p class="info-block__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами
-            достопримечательностях</p>
-        </div>
+    <section class="intro">
+      <h2 class="visually-hidden">Intro блок Седона</h2>
+      <div class="intro__logo">
+        <!-- svg без слогана, краткая версия -->
+        <img class="intro__logo-image" src="./img/place-holder--150x150.png" width="100%" height="210" alt="Sedona">
       </div>
+      <p class="intro__title"><strong>Оставьте свой отзыв</strong></p>
+      <p class="intro__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
     </section>
     <section class="feedback">
       <h2 class="visually-hidden">Форма обратной связи</h2>
@@ -80,37 +70,33 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
-    <div class="page-footer__wrapper">
-      <a class="page-footer__hashtag" href="#" aria-label="Ищите нас по тегу">#visitsedona</a>
-      <div class="page-footer__social social-net">
-        <ul class="social-net__list">
-          <li class="social-net__item">
-            <a class="social-net__link" href="#" aria-label="Мы во Вконтакте">
-              <!-- <svg></svg> -->
-              <img src="./img/place-holder--150x150.png" width="24" height="24" alt="vk">
-            </a>
-          </li>
-          <li class="social-net__item">
-            <a class="social-net__link" href="#" aria-label="Мы на Facebook">
-              <!-- <svg></svg> -->
-              <img src="./img/place-holder--150x150.png" width="24" height="24" alt="fb">
-            </a>
-          </li>
-          <li class="social-net__item">
-            <a class="social-net__link" href="#" aria-label="Мы на YouTube">
-              <!-- <svg></svg> -->
-              <img src="./img/place-holder--150x150.png" width="24" height="24" alt="yt">
-            </a>
-          </li>
-        </ul>
-      </div>
-      <address class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru">Разработано
-          <img class="copyright__logo" src="./img/place-holder--150x150.png" width="27" height="34">
+  <footer class="footer">
+    <a class="footer__hashtag" href="#" aria-label="Ищите нас по тегу">#visitsedona</a>
+    <ul class="footer__list social-list">
+      <li class="social-list__item">
+        <a class="social-list__link" href="#" aria-label="Мы во Вконтакте">
+          <!-- <svg></svg>, временное решение через img -->
+          <img src="./img/place-holder--150x150.png" width="24" height="24" alt="vk">
         </a>
-      </address>
-    </div>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link" href="#" aria-label="Мы на Facebook">
+          <!-- <svg></svg> -->
+          <img src="./img/place-holder--150x150.png" width="24" height="24" alt="fb">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link" href="#" aria-label="Мы на YouTube">
+          <!-- <svg></svg> -->
+          <img src="./img/place-holder--150x150.png" width="24" height="24" alt="yt">
+        </a>
+      </li>
+    </ul>
+    <address class="footer__copyright copyright">
+      <a class="copyright__link" href="https://htmlacademy.ru">Разработано
+        <img class="copyright__logo" src="./img/place-holder--150x150.png" width="27" height="34">
+      </a>
+    </address>
   </footer>
 </body>
 
