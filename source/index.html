@@ -1,12 +1,125 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Седона</title>
+</head>
 
-  </body>
+<body>
+  <header class="header">
+    <nav class="header__nav main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a>Главная</a></li> <!-- href="./index.html" -->
+        <li class="main-nav__item"><a href="./photo.html">Фото и видео</a></li>
+        <li class="main-nav__item"><a href="./form.html">Форма отзыва</a></li>
+        <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+      </ul>
+      <button class="header__menu button" type="button"><span class="button__icon button__icon--menu"></span>Меню сайта</button>
+    </nav>
+    <a class="header__logo">
+      <img class="header__logo-image" src="./img/place-holder--150x150.png" width="102" height="83" alt="Логотип Седона">
+    </a>
+  </header>
+  <main class="main">
+    <h1 class="visually-hidden">Содержимое главной страницы Седона</h1>
+    <section class="intro">
+      <h2 class="visually-hidden">Intro блок Седона</h2>
+      <div class="intro__logo">
+        <!-- svg со слоганом, полная версия -->
+        <img class="intro__logo-image" src="./img/place-holder--150x150.png" width="100%" height="210" alt="Welcome to the gorgeous. Sedona. Because the Grand Canyon sucks!">
+      </div>
+      <p class="intro__title"><strong>Седона - небольшой городок в Аризоне, заслуживающий большего!</strong></p>
+      <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+    </section>
+    <section class="reasons">
+      <h2 class="visually-hidden">Причины по которым Седона круче, чем Гранд Каньон!</h2>
+      <ul class="reasons__list">
+        <li class="reasons__item reasons__item--lightblue">
+          <p class="reasons__title"><strong>Настоящий городок</strong></p>
+          <p class="reasons__order">- №1 -</p>
+          <p class="reasons__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <img class="reasons__photo" src="./img/place-holder--150x150.png" width="100%" height="260" alt="Туристические лавки">
+          <ul class="reasons__list places-list">
+            <li class="places-list__item places-list__item--food">
+              <p class="places-list__title"><strong>Жилье</strong></p>
+              <p class="places-list__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </li>
+            <li class="places-list__item places-list__item--souvenir">
+              <p class="places-list__title"><strong>Сувениры</strong></p>
+              <p class="places-list__text">Не только китайского, но местного производства!</p>
+            </li>
+            <li class="places-list__item places-list__item--housing">
+              <p class="places-list__title"><strong>Еда</strong></p>
+              <p class="places-list__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </li>
+          </ul>
+        </li>
+        <li class="reasons__item reason__item--lightblue">
+          <p class="reasons__title"><strong>Там есть мост Дьявола</strong></p>
+          <p class="reasons__order">- №2 -</p>
+          <p class="reasons__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          <img class="reason__photo" src="./img/place-holder--150x150.png" width="100%" height="260" alt="мост «Дьявола»">
+        </li>
+        <li class="reason__item">
+          <p class="reason__title"><strong>Небольшая площадь</strong></p>
+          <p class="reason__order">- №3 -</p>
+          <p class="reason__text">Все интересные места находятся очень близко</p>
+        </li>
+        <li class="reason__item">
+          <p class="reason__title"><strong>Красивая дорога</strong></p>
+          <p class="reason__order">- №4 -</p>
+          <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        </li>
+        <li class="reason__item">
+          <p class="reason__title"><strong>Мало туристов</strong></p>
+          <p class="reason__order">- №5 -</p>
+          <p class="reason__text">Большинство едет в Гранд Каньон и толпится там</p>
+        </li>
+      </ul>
+    </section>
+    <section class="search-hotel">
+      <h2 class="visually-hidden">Поиск гостиницы</h2>
+      <p class="search-hotel__title"><strong>Заинтересовались?</strong></p>
+      <p class="search-hotel__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
+      <button class="search-hotel__search button" type="button">Найти гостиницу</button>
+      <!-- Карта -->
+    </section>
+  </main>
+  <footer class="footer">
+    <a class="footer__hashtag" href="#" aria-label="Ищите нас по тегу">#visitsedona</a>
+    <!--
+      Сначала сделал по твоим рекомендациям и оставил блок .footer__list, но позже полистал доку по неймингу
+      https://github.com/yoksel/common-words#%D0%B1%D0%BB%D0%BE%D0%BA-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B5%D0%B9.
+      Решил попробовать сделать по аналогии. Если я правильно понимаю БЭМ, то некоторая степень абстракции помогает,
+      <em> в теории</em>, реиспользовать блоки от страницы к странице, из проекта в проект.
+    -->
+    <ul class="footer__list social-list">
+      <li class="social-list__item">
+        <a class="social-list__link" href="#" aria-label="Мы во Вконтакте">
+          <!-- <svg></svg>, временное решение через img -->
+          <img src="./img/place-holder--150x150.png" width="24" height="24" alt="vk">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link" href="#" aria-label="Мы на Facebook">
+          <!-- <svg></svg> -->
+          <img src="./img/place-holder--150x150.png" width="24" height="24" alt="fb">
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link" href="#" aria-label="Мы на YouTube">
+          <!-- <svg></svg> -->
+          <img src="./img/place-holder--150x150.png" width="24" height="24" alt="yt">
+        </a>
+      </li>
+    </ul>
+    <address class="footer__copyright copyright">
+      <a class="copyright__link" href="https://htmlacademy.ru">Разработано
+        <img class="copyright__logo" src="./img/place-holder--150x150.png" width="27" height="34">
+      </a>
+    </address>
+  </footer>
+</body>
+
 </html>
