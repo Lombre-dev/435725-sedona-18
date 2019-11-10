@@ -10,10 +10,10 @@
   <header class="header">
     <nav class="header__nav main-nav">
       <ul class="main-nav__list">
-        <li class="main-nav__item"><a href="./index.html">Главная</a></li>
-        <li class="main-nav__item"><a>Фото и видео</a></li> <!-- href="./photo.html" -->
-        <li class="main-nav__item"><a href="./form.html">Форма отзыва</a></li>
-        <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="./index.html">Главная</a></li>
+        <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Фото и видео</a></li> <!-- href="./photo.html" -->
+        <li class="main-nav__item"><a class="main-nav__link" href="./form.html">Форма отзыва</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
       </ul>
       <button class="header__menu button" type="button"><span class="button__icon button__icon--menu"></span>Меню сайта</button>
     </nav>
@@ -37,34 +37,34 @@
       <ul class="media__list">
         <li class="media__item">
           <img class="media__content" src="./img/place-holder--150x150.png" width="280" height="280">
-          <p class="media__content-title">Неродные просторы</p>
-          <p class="media__content-author">Автор фото: Борис</p>
+          <p class="media__title">Неродные просторы</p>
+          <p class="media__author">Автор фото: Борис</p>
           <button class="media__likes button" type="button"><span class="button__icon button__icon--like">1000</button>
         </li>
         <li class="media__item">
           <img class="media__content" src="./img/place-holder--150x150.png" width="280" height="280">
-          <p class="media__content-title">Местная растительность</p>
-          <p class="media__content-author">Автор фото: Сергей</p>
+          <p class="media__title">Местная растительность</p>
+          <p class="media__author">Автор фото: Сергей</p>
           <button class="media__likes button" type="button"><span class=" button__icon button__icon--like">1000</button>
         </li>
         <li class="media__item">
           <img class="media__content" src="./img/place-holder--150x150.png" width="280" height="280">
-          <p class="media__content-title">Дорога на север</p>
-          <p class="media__content-author">Автор фото: Пётр</p>
+          <p class="media__title">Дорога на север</p>
+          <p class="media__author">Автор фото: Пётр</p>
           <button class="media__likes button" type="button"><span class="button__icon button__icon--like">1000</button>
         </li>
         <li class="media__item">
           <img class="media__content" src="./img/place-holder--150x150.png" width="280" height="280">
-          <p class="media__content-title">Мост Дьявола</p>
-          <p class="media__content-author">Автор фото: Антон</p>
+          <p class="media__title">Мост Дьявола</p>
+          <p class="media__author">Автор фото: Антон</p>
           <button class="media__likes button" type="button"><span class="button__icon button__icon--like">1000</button>
         </li>
         <li class="media__item">
-          <p class="media__title"><strong>Фото и Видео</strong></p>
-          <p class="media__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-          <video class="media__content" src="./img/place-holder--150x150.png" width="280" height="280" controls></video>
-          <p class="media__content-title">Мост Дьявола</p>
-          <p class="media__content-author">Автор фото: Антон</p>
+          <p class="media__heading"><strong>Фото и Видео</strong></p>
+          <p class="media__desc">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          <video class="media__content" poster="./img/place-holder--150x150.png" src="https://www.youtube.com/watch?v=a9eNQZbjpJk" width="280" height="280" controls></video>
+          <p class="media__title">Мост Дьявола</p>
+          <p class="media__author">Автор фото: Антон</p>
           <button class="media__likes button" type="button"><span class="button__icon button__icon--like">1000</button>
         </li>
       </ul>
@@ -72,21 +72,21 @@
   </main>
   <footer class="footer">
     <a class="footer__hashtag" href="#" aria-label="Ищите нас по тегу">#visitsedona</a>
-    <ul class="footer__list social-list">
-      <li class="social-list__item">
-        <a class="social-list__link" href="#" aria-label="Мы во Вконтакте">
+    <ul class="footer__list socials-list">
+      <li class="socials-list__item">
+        <a class="socials-list__link" href="#" aria-label="Мы во Вконтакте">
           <!-- <svg></svg>, временное решение через img -->
           <img src="./img/place-holder--150x150.png" width="24" height="24" alt="vk">
         </a>
       </li>
-      <li class="social-list__item">
-        <a class="social-list__link" href="#" aria-label="Мы на Facebook">
+      <li class="socials-list__item">
+        <a class="socials-list__link" href="#" aria-label="Мы на Facebook">
           <!-- <svg></svg> -->
           <img src="./img/place-holder--150x150.png" width="24" height="24" alt="fb">
         </a>
       </li>
-      <li class="social-list__item">
-        <a class="social-list__link" href="#" aria-label="Мы на YouTube">
+      <li class="socials-list__item">
+        <a class="socials-list__link" href="#" aria-label="Мы на YouTube">
           <!-- <svg></svg> -->
           <img src="./img/place-holder--150x150.png" width="24" height="24" alt="yt">
         </a>
