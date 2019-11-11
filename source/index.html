@@ -10,10 +10,10 @@
   <header class="header">
     <nav class="header__nav main-nav">
       <ul class="main-nav__list">
-        <li class="main-nav__item"><a>Главная</a></li> <!-- href="./index.html" -->
-        <li class="main-nav__item"><a href="./photo.html">Фото и видео</a></li>
-        <li class="main-nav__item"><a href="./form.html">Форма отзыва</a></li>
-        <li class="main-nav__item"><a href="https://htmlacademy.ru">HTML Academy</a></li>
+        <li class="main-nav__item"><a class="main-nav__link main-nav__link--active">Главная</a></li> <!-- href="./index.html" -->
+        <li class="main-nav__item"><a class="main-nav__link" href="./photo.html">Фото и видео</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="./form.html">Форма отзыва</a></li>
+        <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru">HTML Academy</a></li>
       </ul>
       <button class="header__menu button" type="button"><span class="button__icon button__icon--menu"></span>Меню сайта</button>
     </nav>
@@ -22,25 +22,20 @@
     </a>
   </header>
   <main class="main">
-    <h1 class="visually-hidden">Содержимое главной страницы Седона</h1>
-    <section class="intro">
-      <h2 class="visually-hidden">Intro блок Седона</h2>
-      <div class="intro__logo">
-        <!-- svg со слоганом, полная версия -->
-        <img class="intro__logo-image" src="./img/place-holder--150x150.png" width="100%" height="210" alt="Welcome to the gorgeous. Sedona. Because the Grand Canyon sucks!">
-      </div>
-      <p class="intro__title"><strong>Седона - небольшой городок в Аризоне, заслуживающий большего!</strong></p>
-      <p class="intro__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-    </section>
-    <section class="reasons">
-      <h2 class="visually-hidden">Причины по которым Седона круче, чем Гранд Каньон!</h2>
-      <ul class="reasons__list">
-        <li class="reasons__item reasons__item--lightblue">
-          <p class="reasons__title"><strong>Настоящий городок</strong></p>
-          <p class="reasons__order">- №1 -</p>
-          <p class="reasons__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
-          <img class="reasons__photo" src="./img/place-holder--150x150.png" width="100%" height="260" alt="Туристические лавки">
-          <ul class="reasons__list places-list">
+    <div class="main__intro">
+      <!-- svg со слоганом, полная версия -->
+      <img class="main__intro-image" src="./img/place-holder--150x150.png" width="100%" height="210" alt="Welcome to the gorgeous. Sedona. Because the Grand Canyon sucks!">
+    </div>
+    <h1 class="main__heading">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+    <p class="main__desc">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+    <section class="features">
+      <ul class="features__list">
+        <li class="features__item features__item--lightblue">
+          <p class="features__title"><strong>Настоящий городок</strong></p>
+          <p class="features__order">- №1 -</p>
+          <p class="features__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
+          <img class="features__photo" src="./img/place-holder--150x150.png" width="100%" height="260" alt="Туристические лавки">
+          <ul class="features__list places-list">
             <li class="places-list__item places-list__item--food">
               <p class="places-list__title"><strong>Жилье</strong></p>
               <p class="places-list__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
@@ -55,26 +50,26 @@
             </li>
           </ul>
         </li>
-        <li class="reasons__item reason__item--lightblue">
-          <p class="reasons__title"><strong>Там есть мост Дьявола</strong></p>
-          <p class="reasons__order">- №2 -</p>
-          <p class="reasons__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-          <img class="reason__photo" src="./img/place-holder--150x150.png" width="100%" height="260" alt="мост «Дьявола»">
+        <li class="features__item features__item--lightblue">
+          <p class="features__title"><strong>Там есть мост Дьявола</strong></p>
+          <p class="features__order">- №2 -</p>
+          <p class="features__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          <img class="features__photo" src="./img/place-holder--150x150.png" width="100%" height="260" alt="мост «Дьявола»">
         </li>
-        <li class="reason__item">
-          <p class="reason__title"><strong>Небольшая площадь</strong></p>
-          <p class="reason__order">- №3 -</p>
-          <p class="reason__text">Все интересные места находятся очень близко</p>
+        <li class="features__item">
+          <p class="features__title"><strong>Небольшая площадь</strong></p>
+          <p class="features__order">- №3 -</p>
+          <p class="features__text">Все интересные места находятся очень близко</p>
         </li>
-        <li class="reason__item">
-          <p class="reason__title"><strong>Красивая дорога</strong></p>
-          <p class="reason__order">- №4 -</p>
-          <p class="reason__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+        <li class="features__item">
+          <p class="features__title"><strong>Красивая дорога</strong></p>
+          <p class="features__order">- №4 -</p>
+          <p class="features__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
         </li>
-        <li class="reason__item">
-          <p class="reason__title"><strong>Мало туристов</strong></p>
-          <p class="reason__order">- №5 -</p>
-          <p class="reason__text">Большинство едет в Гранд Каньон и толпится там</p>
+        <li class="features__item">
+          <p class="features__title"><strong>Мало туристов</strong></p>
+          <p class="features__order">- №5 -</p>
+          <p class="features__text">Большинство едет в Гранд Каньон и толпится там</p>
         </li>
       </ul>
     </section>
@@ -83,32 +78,26 @@
       <p class="search-hotel__title"><strong>Заинтересовались?</strong></p>
       <p class="search-hotel__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Cедоне</p>
       <button class="search-hotel__search button" type="button">Найти гостиницу</button>
-      <!-- Карта -->
+      <iframe сlass="search-hotel__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1182858.3883875813!2d-111.7991361997148!3d35.03770730299709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1573402848161!5m2!1sru!2sru" width="100%" height="350" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
     </section>
   </main>
   <footer class="footer">
     <a class="footer__hashtag" href="#" aria-label="Ищите нас по тегу">#visitsedona</a>
-    <!--
-      Сначала сделал по твоим рекомендациям и оставил блок .footer__list, но позже полистал доку по неймингу
-      https://github.com/yoksel/common-words#%D0%B1%D0%BB%D0%BE%D0%BA-%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B5%D0%B9.
-      Решил попробовать сделать по аналогии. Если я правильно понимаю БЭМ, то некоторая степень абстракции помогает,
-      <em> в теории</em>, реиспользовать блоки от страницы к странице, из проекта в проект.
-    -->
-    <ul class="footer__list social-list">
-      <li class="social-list__item">
-        <a class="social-list__link" href="#" aria-label="Мы во Вконтакте">
+    <ul class="footer__list socials-list">
+      <li class="socials-list__item">
+        <a class="socials-list__link" href="#" aria-label="Мы во Вконтакте">
           <!-- <svg></svg>, временное решение через img -->
           <img src="./img/place-holder--150x150.png" width="24" height="24" alt="vk">
         </a>
       </li>
-      <li class="social-list__item">
-        <a class="social-list__link" href="#" aria-label="Мы на Facebook">
+      <li class="socials-list__item">
+        <a class="socials-list__link" href="#" aria-label="Мы на Facebook">
           <!-- <svg></svg> -->
           <img src="./img/place-holder--150x150.png" width="24" height="24" alt="fb">
         </a>
       </li>
-      <li class="social-list__item">
-        <a class="social-list__link" href="#" aria-label="Мы на YouTube">
+      <li class="socials-list__item">
+        <a class="socials-list__link" href="#" aria-label="Мы на YouTube">
           <!-- <svg></svg> -->
           <img src="./img/place-holder--150x150.png" width="24" height="24" alt="yt">
         </a>
