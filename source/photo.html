@@ -21,19 +21,14 @@
       <img class="header__logo-image" src="./img/place-holder--150x150.png" width="102" height="83" alt="Логотип Седона">
     </a>
   </header>
-  <main class="page-main">
-    <h1 class="visually-hidden">Содержимое страницы Фото и Видео</h1>
-    <section class="intro">
-      <h2 class="visually-hidden">Intro блок Седона</h2>
-      <div class="intro__logo">
-        <!-- svg без слогана, краткая версия -->
-        <img class="intro__logo-image" src="./img/place-holder--150x150.png" width="100%" height="210" alt="Sedona">
-      </div>
-      <p class="intro__title"><strong>Фото и Видео</strong></p>
-      <p class="intro__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-    </section>
+  <main class="main">
+    <div class="main__intro">
+      <!-- svg без слогана, краткая версия -->
+      <img class="main__intro-image" src="./img/place-holder--150x150.png" width="100%" height="210" alt="Sedona">
+    </div>
+    <h1 class="main__heading">Фото и Видео</h1>
+    <p class="main__desc">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
     <section class="media">
-      <h2 class="visually-hidden">Фото и видео</h2>
       <ul class="media__list">
         <li class="media__item">
           <img class="media__content" src="./img/place-holder--150x150.png" width="280" height="280">
@@ -60,12 +55,12 @@
           <button class="media__likes button" type="button"><span class="button__icon button__icon--like">1000</button>
         </li>
         <li class="media__item">
-          <p class="media__heading"><strong>Фото и Видео</strong></p>
-          <p class="media__desc">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-          <video class="media__content" poster="./img/place-holder--150x150.png" src="https://www.youtube.com/watch?v=a9eNQZbjpJk" width="280" height="280" controls></video>
-          <p class="media__title">Мост Дьявола</p>
-          <p class="media__author">Автор фото: Антон</p>
-          <button class="media__likes button" type="button"><span class="button__icon button__icon--like">1000</button>
+          <p class="media__heading"><strong>Вы еще сомневаетесь?</strong></p>
+          <p class="media__desc">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <video class="media__content" poster="./img/place-holder--150x150.png" src="https://youtu.be/a9eNQZbjpJk" width="280" height="280" controls></video>
+          <button class="media__control button" type="button"><span class="button__icon button__icon--play">Воспроизвести</button>
+          <button class="media__closed-caption button" type="button"><span class="button__icon button__icon--cc">Включить скрытые субтитры</button>
+          <button class="media__screen button" type="button"><span class="button__icon button__icon--fullscreen">На полный экран</button>
         </li>
       </ul>
     </section>
