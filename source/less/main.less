@@ -1,0 +1,63 @@
+@import "./variables.less";
+
+.main {
+}
+
+.main__welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 389px;
+
+  background-color: linear-gradient(0deg, rgba(63, 92, 88, 1) 0%, rgba(228, 241, 249, 1) 100%);
+  background-image: url("../img/intro/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.main__welcome-image {
+  width: 282px;
+  margin: auto;
+  content: url("../img/intro/text-sedona-index.svg");
+}
+
+.main__welcome-image--short {
+  content: url("../img/intro/text-sedona.svg");
+}
+
+.main__content {
+  background-color: cyan;
+}
+
+.main__arrow-start {
+  position: relative;
+  top: -26px;
+  fill: @body-background-color;
+}
+
+.main__arrow-end {
+  fill: @body-background-color;
+  background-color: @features-default-background-color;
+}
+
+.main__heading {
+  margin-top: 35px;
+  padding: 0 30px;
+
+  color: @body-color;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: @font-size-medium;
+  font-weight: bold;
+}
+
+.main__desc {
+  padding: 0 30px;
+
+  color: @body-color;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: @font-size-small;
+  line-height: @font-size-small * 1.75;
+}

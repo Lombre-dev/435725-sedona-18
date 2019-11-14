@@ -1,0 +1,58 @@
+@import "./variables.less";
+
+.features {
+}
+
+.features__list {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+.features__item {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.features__item-header {
+  width: 100%;
+
+  fill: @body-background-color;
+}
+
+.features__item--lightblue {
+  color: #ffffff;
+
+  background-color: @features-default-background-color;
+}
+
+.features__photo {
+  display: block;
+  width: 100%;
+}
+
+.features__places {
+  margin: 0;
+  padding: 0;
+
+  color: @body-color;
+  fill: @features-default-background-color;
+
+  background-color: @body-background-color;
+}
+
+.features__title {
+  padding: 0 20px;
+}
+
+.features__order,
+.features__text {
+  padding: 0 20px;
+
+  text-align: center;
+  font-size: @font-size-small;
+  line-height: @font-size-small * 1.5;
+}

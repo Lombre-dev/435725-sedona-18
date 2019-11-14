@@ -1,0 +1,38 @@
+@import "./variables.less";
+@import "./mixins.less";
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.header__nav {
+  display: block;
+}
+
+.header__logo {
+  display: flex;
+  justify-content: center;
+  flex-basis: 56px;
+}
+
+.header__logo-image {
+  position: absolute;
+}
+
+.header__menu {
+  position: absolute;
+  align-self: flex-end;
+
+  @svg-colors: #ffffff, #ffffff, #ffffff, #ffffff;
+
+  .mixin-button(@default-button-colors, @default-button-background-colors);
+  .mixin-svg-link(@svg-colors);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+}

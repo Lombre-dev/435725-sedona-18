@@ -1,0 +1,23 @@
+@import "./variables.less";
+@import "./mixins.less";
+
+.copyright {
+  // display: flex;
+}
+
+.copyright__link {
+  .mixin-link(@default-link-colors);
+  .mixin-svg-link(@default-link-colors);
+
+  display: flex;
+  align-items: center;
+
+  font-size: @font-size-small;
+  font-weight: normal;
+
+  cursor: pointer;
+}
+
+.copyright__text {
+  padding-right: 10px;
+}

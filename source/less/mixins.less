@@ -1,0 +1,71 @@
+.mixin-button(@colors; @background-colors) {
+  color: extract(@colors, 1);
+
+  background-color: extract(@background-colors, 1);
+
+  user-select: none;
+  // cursor: pointer;
+
+  &:hover {
+    color: extract(@colors, 2);
+
+    background-color: extract(@background-colors, 2);
+  }
+
+  &:active {
+    color: extract(@colors, 3);
+
+    background-color: extract(@background-colors, 3);
+  }
+
+  // &:visited {
+  //   color: extract(@colors, 1);
+
+  //   background-color: extract(@background-colors, 1);
+  // }
+
+  &:disabled {
+    color: extract(@colors, 4);
+
+    background-color: extract(@background-colors, 4);
+  }
+}
+
+.mixin-link(@colors) {
+
+  color: extract(@colors, 1);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  // cursor: pointer;
+
+  &:hover {
+    color: extract(@colors, 2);
+  }
+
+  &:active {
+    color: extract(@colors, 3);
+  }
+
+  // &:visited {
+  //   color: extract(@colors, 1);
+  // }
+}
+
+.mixin-svg-link(@colors) {
+
+  fill: extract(@colors, 1);
+
+  &:hover {
+    fill: extract(@colors, 2);
+  }
+
+  &:active {
+    fill: extract(@colors, 3);
+  }
+
+  // &:visited {
+  //   fill: extract(@colors, 1);
+  // }
+}

@@ -1,0 +1,27 @@
+@import "./mixins.less";
+
+.socials-list {
+  display: flex;
+
+  list-style-type: none;
+}
+
+.socials-list__item {
+  margin-right: 6px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.socials-list__link {
+
+  .mixin-button(@default-button-colors, @default-button-background-colors);
+  .mixin-svg-link(@default-icon-colors);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
+}
