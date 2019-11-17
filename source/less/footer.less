@@ -4,10 +4,10 @@
 .footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  justify-content: space-around;
+  // align-content: center;
   align-items: center;
-  padding: 20px;
+  min-height: 120px;
 
   background-color: rgba(254, 254, 254, 0.9);
 }
@@ -15,14 +15,14 @@
 .footer__hashtag {
   .mixin-link(@default-link-colors);
 
-  margin: 20px;
+  margin: 15px;
 
-  font-size: @font-size-big;
+  font-size: @font-size-large;
 }
 
 .footer__list {
-  margin: 20px;
-  padding: 0;
+  margin: 15px;
+  // padding: 0;
 }
 
 .footer__copyright {
@@ -30,5 +30,5 @@
   align-items: center;
   font-style: normal;
   font-weight: normal;
-  margin: 20px;
+  margin: 15px;
 }

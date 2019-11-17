@@ -1,0 +1,148 @@
+@import "./variables.less";
+
+@input-colors: #333333, #333333, #a4a4a4, rgba(51, 51, 51, 0.2);
+@input-background-colors: #f2f2f2, #e5e5e5, #d5d5d5, rgba(242, 242, 242, 0.2);
+@fieldset-border-top-color: #e5e5e5;
+
+.feedback {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+
+.feedback__fieldset {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  font-weight: bold;
+  text-transform: uppercase;
+
+  border: 0;
+}
+
+.feedback__legend {
+  // padding: 20px 0;
+  // margin: 0;
+
+  text-align: center;
+}
+
+.feedback__label {
+  flex-grow: 1;
+  display: flex;
+  // flex-wrap: wrap;
+  align-items: center;
+  // padding: 0;
+  // margin: 0;
+  // margin-right: 10px;
+
+  font-size: @font-size-small;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.feedback__input {
+  flex-grow: 1;
+  padding: 17px;
+
+  font-family: @font-family;
+  font-weight: bold;
+  font-size: @font-size-medium;
+
+  border: 0;
+  background-color: extract(@input-background-colors, 1);
+}
+
+.feedback__radio {
+  display: none;
+
+  & + .feedback__label::before {
+    width: 56px;
+    height: 56px;
+    margin-right: 20px;
+
+    border-radius: 50%;
+    background-color: extract(@input-background-colors, 1);
+
+    content: "";
+  }
+
+  &:checked + .feedback__label::before {
+    content: "0";
+  }
+
+  &:hover + .feedback__label::before {
+    background-color: extract(@input-background-colors, 2);
+  }
+
+  &:active + .feedback__label::before {
+    background-color: extract(@input-background-colors, 3);
+  }
+
+  &:disabled + .feedback__label::before {
+    background-color: extract(@input-background-colors, 4);
+  }
+}
+
+.feedback__check {
+  display: none;
+
+  & + .feedback__label::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    margin-right: 20px;
+
+    fill: extract(@input-colors, 1);
+
+    border-radius: 5px;
+    background-color: extract(@input-background-colors, 1);
+
+    content: "";
+  }
+
+  &:checked + .feedback__label::before {
+    content: url("../img/form/icon-tick.svg");
+    // "<svg viewBox=\"0 0 23.049 16.249\"><path d=\"M22.801,1.299L21.75,0.248c-0.331-0.331-0.872-0.331-1.203,0L8.693,12.102L2.502,5.911c-0.331-0.331-0.872-0.331-1.203,0 L0.248,6.962c-0.331,0.331-0.331,0.872,0,1.202l7.837,7.837c0.167,0.167,0.388,0.248,0.608,0.246c0.22,0.002,0.44-0.079,0.608-0.246 l13.5-13.5C23.132,2.171,23.132,1.63,22.801,1.299z\"/></svg>"
+  }
+
+  &:hover + .feedback__label::before {
+    fill: extract(@input-colors, 2);
+    background-color: extract(@input-background-colors, 2);
+  }
+
+  &:active + .feedback__label::before {
+    fill: extract(@input-colors, 3);
+    background-color: extract(@input-background-colors, 3);
+  }
+
+  &:disabled + .feedback__label::before {
+    fill: extract(@input-colors, 4);
+    background-color: extract(@input-background-colors, 4);
+  }
+}
+
+.feedback__check:checked:hover + .feedback__label::before {
+  fill: red;
+  // content: url("../img/form/icon-tick.svg");
+  // "<svg viewBox=\"0 0 23.049 16.249\"><path d=\"M22.801,1.299L21.75,0.248c-0.331-0.331-0.872-0.331-1.203,0L8.693,12.102L2.502,5.911c-0.331-0.331-0.872-0.331-1.203,0 L0.248,6.962c-0.331,0.331-0.331,0.872,0,1.202l7.837,7.837c0.167,0.167,0.388,0.248,0.608,0.246c0.22,0.002,0.44-0.079,0.608-0.246 l13.5-13.5C23.132,2.171,23.132,1.63,22.801,1.299z\"/></svg>"
+}
+
+.feedback__textarea {
+  width: 100%;
+
+  font-family: @font-family;
+  font-weight: bold;
+  font-size: @font-size-medium;
+
+  border: 0;
+  background-color: extract(@input-background-colors, 1);
+}

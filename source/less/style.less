@@ -4,9 +4,14 @@
 @import "./main.less";
 @import "./features.less";
 @import "./places-list.less";
-@import "./footer.less";
+@import "./search-hotel.less";
+@import "./photo.less";
+@import "./video.less";
 @import "./socials-list.less";
 @import "./copyright.less";
+@import "./footer.less";
+@import "./feedback.less";
+@import "./button.less";
 
 @font-face {
   font-family: "PT Sans";
@@ -24,37 +29,21 @@
     url("../fonts/ptsansbold.woff") format("woff");
 }
 
-.two-screens {
-  display: flex;
-  justify-content: center;
-}
-
-.maket320 {
-  flex-shrink: 0;
-  width: 320px;
-  height: 3610px;
-
-  background-image: url("../img/__temp/sedona-index-mobile.png");
-  background-repeat: no-repeat;
-  background-position: 50% 0%;
-}
-
-.source320 {
-  // width: 320px;
-}
-
 body {
   padding: 0;
   margin: 0;
   // min-width: 320px;
 
   color: @body-color;
-  font-family: "PT Sans", sans-serif;
+  font-family: @font-family;
   font-size: @font-size-medium;
 
   background-color: @body-background-color;
 }
 
+.visually-hidden {
+  display: none;
+}
 
 /*
 http://codeguide.academy/html-css.html#css-order

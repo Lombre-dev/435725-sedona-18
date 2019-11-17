@@ -2,6 +2,9 @@
 @import "./mixins.less";
 
 .main-nav {
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .main-nav__list {
@@ -10,28 +13,31 @@
   margin: 0;
   padding: 0;
 
-  list-style-type: none;
+  list-style: none;
 }
 
 .main-nav__item {
+
+  @border-width: 1px;
+
   display: flex;
-}
+  flex-basis: @nav-menu-min-height;
+  height: @nav-menu-min-height;
+  box-sizing: border-box;
 
-.main-nav__link {
+  border-top: @border-width solid extract(@default-button-border-top-colors, 1);
+  border-bottom: @border-width solid extract(@default-button-border-bottom-colors, 1);
 
-  .mixin-button(@default-button-colors, @default-button-background-colors);
+  &:first-child {
+    border-top: 0;
+  }
 
-  flex-grow: 1;
-  padding: 15.5px 0;
+  &:last-child {
+    border-bottom: 0;
+    flex-basis: @nav-menu-min-height - @border-width;
+  }
 
-  text-decoration: none;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-
-  border-top: 1px solid extract(@default-button-border-top-colors, 1);
-  border-bottom: 1px solid extract(@default-button-border-bottom-colors, 1);
-
+  &:focus,
   &:hover {
     border-top-color: extract(@default-button-border-top-colors, 2);
     border-bottom-color: extract(@default-button-border-bottom-colors, 2);
@@ -42,31 +48,17 @@
     border-bottom-color: extract(@default-button-border-bottom-colors, 3);
   }
 
-  // &:visited {
-  //   border-top-color: extract(@default-button-border-top-colors, 1);
-  //   border-bottom-color: extract(@default-button-border-bottom-colors, 1);
-  // }
-
   &:disabled {
     border-top-color: extract(@default-button-border-top-colors, 4);
     border-bottom-color: extract(@default-button-border-bottom-colors, 4);
   }
 }
 
-.main-nav__close {
-
-  @svg-colors: #ffffff, #ffffff, #ffffff, #ffffff;
-
+.main-nav__link {
   .mixin-button(@default-button-colors, @default-button-background-colors);
-  .mixin-svg-link(@svg-colors);
 
-  position: absolute;
-  top: 0;
-  right: 0;
+  flex-grow: 1;
+  padding: 15px 0;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 56px;
-  height: 56px;
+  text-decoration: none;
 }
