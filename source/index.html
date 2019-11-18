@@ -22,7 +22,7 @@
     </nav>
 
     <a class="header__logo">
-      <img class="header__logo-image" src="./img/logo/logo-sedona-mobile.svg" width="102px" height="83px" alt="Логотип Седона">
+      <img class="header__logo-image" src="./img/logo/logo-sedona-mobile.svg" alt="Логотип Седона">
     </a>
 
     <!--header__menu--active-->
@@ -42,16 +42,30 @@
     </button>
   </header>
   <main class="main">
+
+
     <div class="main__welcome">
-      <!-- src="./img/intro/text-sedona-index.svg" width="282px" -->
       <img class="main__welcome-image" alt="Welcome to the gorgeous. Sedona. Because the Grand Canyon sucks!">
+      <!-- стрелка вниз хвост -->
+      <!-- mobile -->
+      <svg class="main__arrow-start-small" viewBox="440.469 30.889 320 26.111" width="100%" height="26px" preserveAspectRatio="none">
+        <polygon points="760.469,57 760.469,30.889 599.955,57" />
+        <polygon points="440.469,57 599.955,57 440.469,31.056" />
+      </svg>
+      <!-- tablet -->
+      <svg class="main__arrow-start-medium" viewBox="216.469 0 768 57" width="100%" height="57px" preserveAspectRatio="none">
+        <polygon points="249.566,23.71 216.469,20.565 216.469,57 599.955,57 249.566,0" />
+        <polygon points="950.346,23.71 950.346,0 599.955,57 984.469,57 984.469,20.468" />
+      </svg>
+      <!-- desktop -->
+      <svg class="main__arrow-start-large" width="100%" height="57px" viewBox="0 0 1200 57" preserveAspectRatio="none">
+        <polygon points="250,24 0,0 0,57 250,57 600,57 250,0" />
+        <polygon points="951,24 951,0 600,57 951,57 1200,57 1200,0" />
+      </svg>
+      <!-- стрелка вниз хвост -->
     </div>
-    <!-- стрелка вниз хвост -->
-    <svg class="main__arrow-start" viewBox="440.469 30.889 320 26.111" width="100%" height="26px" preserveAspectRatio="none">
-      <polygon points="760.469,57 760.469,30.889 599.955,57" />
-      <polygon points="440.469,57 599.955,57 440.469,31.056" />
-    </svg>
-    <!-- стрелка вниз хвост -->
+
+
     <h1 class="main__heading">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
     <p class="main__desc">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
     <!-- стрелка вниз голова -->
@@ -67,7 +81,10 @@
             <p class="features__order">- №1 -</p>
             <p class="features__text">Седона не аттракцион для туристов, там течет своя жизнь</p>
           </div>
-          <img class="features__photo" src="./img/features/main-city-mobile@1x.jpg" alt="Туристические лавки">
+          <img class="features__photo" srcset="
+            ./img/features/main-city-mobile@1x.jpg,
+            ./img/features/main-city-tablet@1x.jpg,
+            ./img/features/main-city-desktop@1x.jpg" src="./img/features/main-city-mobile@1x.jpg" alt="Туристические лавки">
           <ul class="features__places places-list">
             <li class="places-list__item">
               <svg class="place-list__icon" viewBox="0 0 74.695 72.346">

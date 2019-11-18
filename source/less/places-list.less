@@ -3,6 +3,9 @@
 .places-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
 
   text-align: left;
   text-transform: uppercase;
@@ -12,29 +15,65 @@
 
 .places-list__item {
   display: flex;
+  flex-grow: 1;
   flex-wrap: wrap;
   align-items: center;
-
-  // padding: 25px 20px;
-  // margin: 25px 22px;
+  padding: 20px;
 }
 
 .place-list__icon {
   flex-shrink: 0;
-  min-width: 38px;
-  min-height: 38px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
 }
 
 .places-list__title {
+  flex-grow: 1;
   margin: 0;
-  // flex-grow: 1;
 }
 
 .places-list__text {
   flex-grow: 1;
-  margin: 12px 0 0 48px;
+  margin: 12px 0 0 50px;
 
   font-size: @font-size-small;
   line-height: @line-height-small;
+}
+
+
+@media (min-width: @screen-medium-width) {
+  .places-list {
+    text-align: center;
+  }
+
+  .places-list__item {
+    flex-direction: column;
+    padding: 50px 30px;
+    max-width: 256px - 60px;
+  }
+
+  .places-list__item:nth-child(2) {
+    order: 1;
+  }
+
+  .place-list__icon {
+    width: 75px;
+    height: 75px;
+    margin: 0;
+  }
+
+  .places-list__title {
+    margin: 20px;
+  }
+
+  .places-list__text {
+    margin: 0;
+  }
+}
+
+@media (min-width: @screen-large-width) {
+  .places-list__item {
+    max-width: 400px - 60px;
+  }
 }

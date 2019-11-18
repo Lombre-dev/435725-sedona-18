@@ -12,6 +12,7 @@
 }
 
 .header__logo {
+
   display: flex;
   justify-content: center;
   flex-basis: @nav-menu-min-height;
@@ -21,6 +22,7 @@
 
 .header__logo-image {
   position: absolute;
+  z-index: 1;
 }
 
 .header__menu {
@@ -34,14 +36,13 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  // flex-basis: @nav-menu-min-height;
   width: @nav-menu-min-height;
   height: @nav-menu-min-height;
   padding: 0;
 
   border: 0;
   background-color: transparent;
-  outline: none; // temp
+  outline: none;
 
   .header__menu-cross {
     display: none;
@@ -62,5 +63,25 @@
 
   .header__menu-burder {
     display: none;
+  }
+}
+
+@media (min-width: @screen-medium-width) {
+  .header__logo-image {
+    content: url("../img/logo/logo-sedona-tablet.svg");
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .header__nav {
+    display: block;
+  }
+}
+
+@media (min-width: @screen-large-width) {
+  .header__logo-image {
+    content: url("../img/logo/logo-sedona-desktop.svg");
   }
 }
