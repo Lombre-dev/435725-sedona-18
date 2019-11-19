@@ -2,86 +2,9 @@
 @import "./mixins.less";
 
 .header {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-.header__nav {
-  flex-grow: 1;
-}
-
-.header__logo {
-
-  display: flex;
-  justify-content: center;
-  flex-basis: @nav-menu-min-height;
-
-  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.header__logo-image {
-  position: absolute;
+  position: relative;
   z-index: 1;
 }
 
-.header__menu {
-
-  fill: extract(@default-button-background-colors, 1);
-
-  position: absolute;
-
-  display: flex;
-  align-self: flex-end;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
-  width: @nav-menu-min-height;
-  height: @nav-menu-min-height;
-  padding: 0;
-
-  border: 0;
-  background-color: transparent;
-  outline: none;
-
-  .header__menu-cross {
-    display: none;
-  }
-
-  .header__menu-burder {
-    display: block;
-  }
-}
-
-.header__menu--active {
-
-  fill: extract(@default-button-colors, 1);
-
-  .header__menu-cross {
-    display: block;
-  }
-
-  .header__menu-burder {
-    display: none;
-  }
-}
-
-@media (min-width: @screen-medium-width) {
-  .header__logo-image {
-    content: url("../img/logo/logo-sedona-tablet.svg");
-  }
-
-  .header__menu {
-    display: none;
-  }
-
-  .header__nav {
-    display: block;
-  }
-}
-
-@media (min-width: @screen-large-width) {
-  .header__logo-image {
-    content: url("../img/logo/logo-sedona-desktop.svg");
-  }
+.header__nav {
 }

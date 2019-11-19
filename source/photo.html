@@ -10,48 +10,67 @@
 
 <body>
   <header class="header">
-
     <nav class="header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item"><a class="main-nav__link" href="./index.html">Главная</a></li>
-        <li class="main-nav__item"><a class="main-nav__link">Фото и видео</a></li><!-- href="./photo.html" -->
+        <li class="main-nav__item"><a class="main-nav__link">Фото и видео</a></li> <!-- href="./photo.html" -->
+        <li class="main-nav__item main-nav__item--logo">
+          <a class="main-nav__link main-nav__link--logo" href="./index.html">
+            <img class="main-nav__logo" src="./img/logo/logo-sedona-mobile.svg" width="101.668px" height="83.984px" alt="Логотип Седона">
+          </a>
+        </li>
         <li class="main-nav__item"><a class="main-nav__link" href="./form.html">Форма отзыва</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li> <!-- https://htmlacademy.ru -->
       </ul>
+      <button class="main-nav__toggle main-nav__toggle--active main-nav__toggle--nojs" type="button">
+        <!-- Креситик -->
+        <svg class="main-nav__close-icon" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+          <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+        </svg>
+        <!-- Креситик -->
+        <!-- Гамбургер -->
+        <svg class="main-nav__open-icon" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982">
+          <rect width="22.928" height="3.964" />
+          <rect y="9.009" width="22.928" height="3.964" />
+          <rect y="18.018" width="22.928" height="3.964" />
+        </svg>
+        <!-- Гамбургер -->
+      </button>
     </nav>
-
-    <a class="header__logo">
-      <img class="header__logo-image" src="./img/logo/logo-sedona-mobile.svg" alt="Логотип Седона">
-    </a>
-
-    <button class="header__menu header__menu--active" type="button">
-      <!-- Креситик -->
-      <svg class="header__menu-cross" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-        <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
-      </svg>
-      <!-- Креситик -->
-      <!-- Гамбургер -->
-      <svg class="header__menu-burder" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982">
-        <rect width="22.928" height="3.964" />
-        <rect y="9.009" width="22.928" height="3.964" />
-        <rect y="18.018" width="22.928" height="3.964" />
-      </svg>
-      <!-- Гамбургер -->
-    </button>
   </header>
   <main class="main">
+
     <div class="main__welcome main__welcome--short">
-      <!-- src="./img/intro/text-sedona-index.svg" width="282px" -->
-      <img class="main__welcome-image main__welcome-image--short" alt="Sedona">
+      <img class="main__welcome-image main__welcome-image--short" src="./img/intro/text-sedona.svg" width="228px" height="39px" alt="Sedona">
+      <!-- стрелка вниз хвост -->
+      <!-- mobile -->
+      <svg class="main__arrow-start-small" width="100%" height="26px" viewBox="440.469 30.889 320 26.111" preserveAspectRatio="none">
+        <polygon points="760.469,57 760.469,30.889 599.955,57" />
+        <polygon points="440.469,57 599.955,57 440.469,31.056" />
+      </svg>
+      <!-- tablet -->
+      <svg class="main__arrow-start-medium" width="100%" height="57px" viewBox="216.469 0 768 57" preserveAspectRatio="none">
+        <polygon points="249.566,23.71 216.469,20.565 216.469,57 599.955,57 249.566,0" />
+        <polygon points="950.346,23.71 950.346,0 599.955,57 984.469,57 984.469,20.468" />
+      </svg>
+      <!-- desktop -->
+      <svg class="main__arrow-start-large" width="100%" height="57px" viewBox="0 0 1200 57" preserveAspectRatio="none">
+        <polygon points="250,24 0,0 0,57 250,57 600,57 250,0" />
+        <polygon points="951,24 951,0 600,57 951,57 1200,57 1200,0" />
+      </svg>
+      <!-- стрелка вниз хвост -->
     </div>
-    <!-- стрелка вниз хвост -->
-    <svg class="main__arrow-start" viewBox="440.469 30.889 320 26.111" width="100%" height="26px" preserveAspectRatio="none">
-      <polygon points="760.469,57 760.469,30.889 599.955,57" />
-      <polygon points="440.469,57 599.955,57 440.469,31.056" />
-    </svg>
-    <!-- стрелка вниз хвост -->
-    <h1 class="main__heading">Фото и Видео</h1>
-    <p class="main__desc">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+
+    <div class="main__desc main__desc--photo">
+      <h1 class="main__heading">Фото и Видео</h1>
+      <p class="main__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+    </div>
+    <!-- стрелка вниз голова -->
+    <!-- <svg class="main__arrow-end" width="100%" height="37px" viewBox="0 12.452 320 37" preserveAspectRatio="none">
+          <polygon points="320,12.452 0,12.452 0,34.175 160,49.452 320,34.175" />
+        </svg> -->
+    <!-- стрелка вниз голова -->
+
     <section class="photo">
       <ul class="photo__list">
         <li class="photo__item">

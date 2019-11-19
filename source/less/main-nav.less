@@ -1,7 +1,13 @@
 @import "./variables.less";
 @import "./mixins.less";
 
+@item-height: 56px;
+@item-border-width: 1px;
+
 .main-nav {
+  display: flex;
+  flex-direction: column;
+
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
@@ -14,18 +20,25 @@
   padding: 0;
 
   list-style: none;
+
+  &--closed {
+    .main-nav__item {
+      display: none;
+    }
+
+    .main-nav__item--logo {
+      display: flex;
+    }
+  }
 }
 
 .main-nav__item {
-
-  @border-width: 1px;
-
   display: flex;
-  min-height: @nav-menu-min-height;
+  min-height: @item-height;
   box-sizing: border-box;
 
-  border-top: @border-width solid extract(@default-button-border-top-colors, 1);
-  border-bottom: @border-width solid extract(@default-button-border-bottom-colors, 1);
+  border-top: @item-border-width solid extract(@default-button-border-top-colors, 1);
+  border-bottom: @item-border-width solid extract(@default-button-border-bottom-colors, 1);
 
   &:first-child {
     border-top: 0;
@@ -33,7 +46,6 @@
 
   &:last-child {
     border-bottom: 0;
-    flex-basis: @nav-menu-min-height - @border-width;
   }
 
   &:focus,
@@ -51,6 +63,15 @@
     border-top-color: extract(@default-button-border-top-colors, 4);
     border-bottom-color: extract(@default-button-border-bottom-colors, 4);
   }
+
+  &--logo {
+    order: 1;
+    height: @item-height;
+    justify-content: center;
+
+    border: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+  }
 }
 
 .main-nav__link {
@@ -60,42 +81,114 @@
   padding: 15px;
 
   text-decoration: none;
+
+  &--logo {
+    @background-colors: transparent, transparent, transparent, transparent;
+    .mixin-button(@default-link-colors, @background-colors);
+
+    // flex-grow: 0;
+    padding: 0;
+    flex-grow: 0;
+    // margin: 0 auto;
+    // align-items: center;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  fill: extract(@default-button-background-colors, 1);
+
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: @item-height;
+  height: @item-height;
+  padding: 0;
+
+  border: 0;
+  background-color: transparent;
+
+  .main-nav__close-icon {
+    display: none;
+  }
+
+  .main-nav__open-icon {
+    display: block;
+  }
+
+  &--active {
+
+    fill: extract(@default-button-colors, 1);
+
+    .main-nav__close-icon {
+      display: block;
+    }
+
+    .main-nav__open-icon {
+      display: none;
+    }
+  }
+
+  &--nojs {
+    display: none;
+  }
 }
 
 @media (min-width: @screen-medium-width) {
   .main-nav__list {
-    position: absolute;
-    width: 100%;
-
     flex-direction: row;
-    justify-content: center;
+
+    &--closed {
+      .main-nav__item {
+        display: flex;
+      }
+    }
   }
 
   .main-nav__item {
+    width: 20%;
+
+    font-size: @font-size-small;
+
     border: 0;
+
+    &--logo {
+      order: 0;
+
+      box-shadow: none;
+    }
   }
 
-  .main-nav__item:nth-child(2) {
-    margin-right: 150px;
+  .main-nav__logo {
+    content: url("../img/logo/logo-sedona-tablet.svg");
   }
 
   .main-nav__link {
     @background-colors: transparent, transparent, transparent, transparent;
     .mixin-button(@default-link-colors, @background-colors);
 
-    // flex-grow: 0;
-    width: 120px;
     padding: 18px;
 
-    font-size: @font-size-small;
+    &--logo {
+      padding: 0;
+    }
+  }
+
+  .main-nav__toggle {
+    display: none;
   }
 }
 
 @media (min-width: @screen-large-width) {
-  .main-nav__link {
-    width: 120px;
-    padding: 18px;
+  .main-nav__logo {
+    width: 186.643px;
+    height: 96.425px;
 
-    font-size: @font-size-small;
+    content: url("../img/logo/logo-sedona-desktop.svg");
   }
 }

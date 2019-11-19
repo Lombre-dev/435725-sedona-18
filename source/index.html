@@ -9,51 +9,47 @@
 </head>
 
 <body>
-
   <header class="header">
-
     <nav class="header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item"><a class="main-nav__link">Главная</a></li> <!-- href="./index.html" -->
         <li class="main-nav__item"><a class="main-nav__link" href="./photo.html">Фото и видео</a></li>
+        <li class="main-nav__item main-nav__item--logo">
+          <a class="main-nav__link main-nav__link--logo">
+            <img class="main-nav__logo" src="./img/logo/logo-sedona-mobile.svg" width="101.668px" height="83.984px" alt="Логотип Седона">
+          </a>
+        </li>
         <li class="main-nav__item"><a class="main-nav__link" href="./form.html">Форма отзыва</a></li>
         <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li> <!-- https://htmlacademy.ru -->
       </ul>
+      <button class="main-nav__toggle main-nav__toggle--active main-nav__toggle--nojs" type="button">
+        <!-- Креситик -->
+        <svg class="main-nav__close-icon" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
+          <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+        </svg>
+        <!-- Креситик -->
+        <!-- Гамбургер -->
+        <svg class="main-nav__open-icon" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982">
+          <rect width="22.928" height="3.964" />
+          <rect y="9.009" width="22.928" height="3.964" />
+          <rect y="18.018" width="22.928" height="3.964" />
+        </svg>
+        <!-- Гамбургер -->
+      </button>
     </nav>
-
-    <a class="header__logo">
-      <img class="header__logo-image" src="./img/logo/logo-sedona-mobile.svg" alt="Логотип Седона">
-    </a>
-
-    <!--header__menu--active-->
-    <button class="header__menu header__menu--active" type="button">
-      <!-- Креситик -->
-      <svg class="header__menu-cross" width="22.199px" height="22.199px" viewBox="0 0 22.199 22.199">
-        <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
-      </svg>
-      <!-- Креситик -->
-      <!-- Гамбургер -->
-      <svg class="header__menu-burder" width="22.928px" height="21.982px" viewBox="0 0 22.928 21.982">
-        <rect width="22.928" height="3.964" />
-        <rect y="9.009" width="22.928" height="3.964" />
-        <rect y="18.018" width="22.928" height="3.964" />
-      </svg>
-      <!-- Гамбургер -->
-    </button>
   </header>
   <main class="main">
 
-
     <div class="main__welcome">
-      <img class="main__welcome-image" alt="Welcome to the gorgeous. Sedona. Because the Grand Canyon sucks!">
+      <img class="main__welcome-image" src="./img/intro/text-sedona-index.svg" width="282px" height="214.5px" alt="Welcome to the gorgeous. Sedona. Because the Grand Canyon sucks!">
       <!-- стрелка вниз хвост -->
       <!-- mobile -->
-      <svg class="main__arrow-start-small" viewBox="440.469 30.889 320 26.111" width="100%" height="26px" preserveAspectRatio="none">
+      <svg class="main__arrow-start-small" width="100%" height="26px" viewBox="440.469 30.889 320 26.111" preserveAspectRatio="none">
         <polygon points="760.469,57 760.469,30.889 599.955,57" />
         <polygon points="440.469,57 599.955,57 440.469,31.056" />
       </svg>
       <!-- tablet -->
-      <svg class="main__arrow-start-medium" viewBox="216.469 0 768 57" width="100%" height="57px" preserveAspectRatio="none">
+      <svg class="main__arrow-start-medium" width="100%" height="57px" viewBox="216.469 0 768 57" preserveAspectRatio="none">
         <polygon points="249.566,23.71 216.469,20.565 216.469,57 599.955,57 249.566,0" />
         <polygon points="950.346,23.71 950.346,0 599.955,57 984.469,57 984.469,20.468" />
       </svg>
@@ -65,14 +61,16 @@
       <!-- стрелка вниз хвост -->
     </div>
 
-
-    <h1 class="main__heading">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
-    <p class="main__desc">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+    <div class="main__desc">
+      <h1 class="main__heading">Седона - небольшой городок в Аризоне, заслуживающий большего!</h1>
+      <p class="main__text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+    </div>
     <!-- стрелка вниз голова -->
-    <svg class="main__arrow-end" viewBox="0 12.452 320 37" width="100%" height="37px" preserveAspectRatio="none">
+    <svg class="main__arrow-end" width="100%" height="37px" viewBox="0 12.452 320 37" preserveAspectRatio="none">
       <polygon points="320,12.452 0,12.452 0,34.175 160,49.452 320,34.175" />
     </svg>
     <!-- стрелка вниз голова -->
+
     <section class="features">
       <ul class="features__list">
         <li class="features__item features__item--lightblue">

@@ -1,7 +1,7 @@
 @import "./variables.less";
 
-.main {
-}
+// .main {
+// }
 
 .main__welcome {
   position: relative;
@@ -14,27 +14,25 @@
 
   background-image: url("../img/intro/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0%;
-}
-
-.main__welcome--short {
-  height: 160px;
   background-position: 50% 100%;
 }
 
-.main__welcome-image {
-  width: 280px;
+.main__welcome--short {
+  height: 158px;
+}
 
-  content: url("../img/intro/text-sedona-index.svg");
+.main__welcome-image {
+  max-width: 87.5%;
+  max-height: 69.5%;
+  width: auto;
+  height: auto;
 }
 
 .main__welcome-image--short {
-  position: relative;
-  top: -10px;
+  margin-top: -12px;
+  height: 38px;
 
-  width: 230px;
-
-  content: url("../img/intro/text-sedona.svg");
+  // content: url("../img/intro/text-sedona.svg");
 }
 
 .main__arrow-start-small,
@@ -51,6 +49,42 @@
   display: none;
 }
 
+.main__desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 30px;
+  padding-bottom: 0;
+  margin: 0 auto;
+  max-width: 500px;
+
+  color: @body-color;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--form {
+    max-width: 440px;
+    padding: 30px 20px 10px;
+  }
+
+  &--photo {
+    max-width: 440px;
+    padding: 30px 25px 10px;
+  }
+}
+
+.main__heading {
+  font-size: @font-size-medium;
+  line-height: @line-height-medium;
+}
+
+.main__text {
+  color: @body-second-color;
+  font-size: @font-size-small;
+  line-height: @line-height-medium;
+}
+
 .main__arrow-end {
   display: block;
 
@@ -58,47 +92,46 @@
   background-color: @features-default-background-color;
 }
 
-.main__heading {
-  margin: 15px 0;
-  padding: 0 30px;
-
-  color: @body-color;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: @font-size-medium;
-  line-height: @line-height-medium;
-  font-weight: bold;
-}
-
-.main__desc {
-  margin-top: 26px;
-  margin-bottom: 5px;
-  padding: 0 30px;
-
-  color: @body-color;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: @font-size-small;
-  line-height: @line-height-medium;
-}
-
 @media (min-width: @screen-medium-width) {
   .main__welcome {
     height: 518px;
 
-    background-image: url("../img/intro/bg-back-tablet@1x.jpg");
+    // background-image: url("../img/intro/bg-back-tablet@1x.jpg");
+    background-image: url("../img/intro/bg-back-desktop@1x.jpg");
   }
 
   .main__welcome--short {
     height: 290px;
   }
 
-  .main__welcome-image {
-    width: 460px;
+  .main__welcome-image--short {
+    margin-top: -22px;
+    height: 78px;
+  }
+
+  .main__desc {
+    padding: 30px;
+
+    .main__heading {
+      font-size: @font-size-large;
+    }
+
+    &--form,
+    &--photo {
+      padding: 50px;
+
+      .main__heading {
+        font-size: @font-size-extra-large;
+      }
+    }
   }
 
   .main__arrow-start-small,
   .main__arrow-start-large {
+    display: none;
+  }
+
+  .main__arrow-end {
     display: none;
   }
 
