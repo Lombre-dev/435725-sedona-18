@@ -1,26 +1,61 @@
+// стиль именования переменных
+// блок-стиль (сущность-атрибут)
+
+// overall >>>
+// цвет текста на странице, по умолчанию
 @body-color: #000000;
+// альтернативный цвет текста
 @body-second-color: #333333;
 
+// цвет фона на странице
 @body-background-color: #ffffff;
 
-@features-default-color: #ffffff;
-@features-default-background-color: #81b3d2;
-
-@features-second-color: @body-color;
-@features-second-background-color: #eeeeee;
-
+// цвета текста для кнопок
 @default-button-colors:
   #ffffff, // normal
   #ffffff, // hover
   rgba(255, 255, 255, 0.3), // down
   #ffffff; // disabled
+
+// цвета фона для кнопок
 @default-button-background-colors: #81b3d2, #669ec0, #5496bd, #e5e5e5;
-
-@default-link-colors: #000000, #81b3d2, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3);
-@default-icon-colors: @default-button-colors;
-
+// цвета рамки для кнопок, пока используется только в навигации.
 @default-button-border-top-colors: #9ac2db, #86b2cd, #77acca, #cccccc;
 @default-button-border-bottom-colors: #678fa8, #678fa8, #678fa8, #cccccc;
+
+// цвета ссылок
+@default-link-colors: #000000, #81b3d2, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3);
+// цвета иконок на кнопках, пока используется только в social-list блоке.
+// возможно в video, likes
+@default-icon-colors: @default-button-colors;
+// overall <<<
+
+// index.html >>>
+// цвета текстов для фич, основные блоки
+@features-default-color: #ffffff;
+// цвета фона для фичи
+@features-default-background-color: #81b3d2;
+// цвета текстов для фич, второстепенные блоки
+@features-second-color: @body-color;
+// цвета фона для фичи
+@features-second-background-color: #eeeeee;
+// index.html <<<
+
+// main-nav >>>
+// высота элемента в навигации, что-то вроде flex-basis
+@main-nav-item-height: 56px;
+// ширина рамки, испольузется пока один раз, скорее относится к default-button-border
+@main-nav-item-border-width: 1px;
+// main-nav <<<
+
+// form.html >>>
+// цвета для элементов форм. check/radio
+@input-colors: #333333, #333333, #a4a4a4, rgba(51, 51, 51, 0.2);
+// цвета фона для элементов
+@input-background-colors: #f2f2f2, #e5e5e5, #d5d5d5, rgba(242, 242, 242, 0.2);
+// цвет для декоративных бордеров
+@fieldset-border-top-color: #e5e5e5;
+// form.html <<<
 
 @font-family: "PT Sans", Arial, sans-serif;
 @font-size-small: 14px;
@@ -35,25 +70,3 @@
 @screen-small-width: 320px;
 @screen-medium-width: 768px;
 @screen-large-width: 1200px;
-
-// @button-background--normal: #81b3d2;
-// @button-background--hover: #669ec0;
-// @button-background--down: #5496bd;
-// @button-background--disabled: #e5e5e5;
-
-// @button-content--normal: rgba(255, 255, 255, 1);
-// @button-content--hover: rgba(255, 255, 255, 1);
-// @button-content--down: rgba(255, 255, 255, 0.3);
-// @button-content--disabled: rgba(255, 255, 255, 1);
-
-// @button-border-top--normal: #9bc2db;
-// @button-border-top--hover: #86b2cd;
-// @button-border-top--down: #77acca;
-// @button-border-top--disabled: #cccccc;
-
-// @button-border-bottom--normal: #678fa8;
-// @button-border-bottom--hover: #678fa8;
-// @button-border-bottom--down: @button-border-bottom--hover;
-// @button-border-bottom--disabled: @button-border-bottom--hover;
-
-@TEST: #ff0000;
