@@ -3,10 +3,6 @@
 .features {
   text-align: center;
   text-transform: uppercase;
-
-  br {
-    display: none;
-  }
 }
 
 .features__list {
@@ -15,19 +11,16 @@
   padding: 0;
   margin: 0;
 
-  // font-size: @font-size-medium;
-  // line-height: @line-height-medium;
-
   list-style: none;
 }
 
 .features__item {
   display: flex;
-  flex-grow: 1;
   flex-wrap: wrap;
   justify-content: center;
+  width: 100%;
 
-  &--lightblue {
+  &--main {
     .features__desc {
       padding: 40px 25px;
 
@@ -37,29 +30,39 @@
     }
   }
 
-  &--gray {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  &--leading {
+    .features__desc {
+      padding-top: 74px;
+
+      background-image: url("../img/features/bg-triangle.svg");
+      background-repeat: no-repeat;
+      background-size: 100% 37px;
+    }
+  }
+
+  &--second {
     background-color: @features-second-background-color;
 
-    &:last-child {
-      border-bottom: 0;
-    }
-
     .features__desc {
-      padding: 30px 35px;
+      padding: 30px 15px;
+      margin: 0 20px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &--second-last {
+    .features__desc {
+      border-bottom: 0;
     }
   }
 }
 
 .features__desc {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-
-  font-size: @font-size-small;
-  line-height: @line-height-small;
+  width: 100%;
 }
 
 .features__title {
@@ -70,61 +73,59 @@
 
 .features__order {
   margin: 15px;
+  font-size: @font-size-small;
+  line-height: @line-height-small;
 }
 
 .features__text {
   margin: 0;
+  font-size: @font-size-small;
+  line-height: @line-height-small;
 }
 
 .features__photo {
-  display: block;
-  width: auto;
-  height: auto;
-}
+  overflow: hidden;
 
-.features__places {
-  color: @body-color;
-
-  fill: @features-default-background-color;
-  background-color: @body-background-color;
+  img {
+    display: block;
+    width: 100%;
+  }
 }
 
 @media (min-width: @screen-medium-width) {
-  .features {
-    br {
-      display: inline;
-    }
-  }
-
   .features__item {
-    &:nth-child(1) .features__photo {
-      content: url("../img/features/main-city-tablet@1x.jpg");
-    }
-
-    &:nth-child(2) .features__photo {
-      content: url("../img/features/main-bridge-tablet@1x.jpg");
-    }
-
-    &--lightblue {
+    &--main {
       .features__desc {
         width: 100% / 3;
-        height: 256px;
         padding: 40px;
       }
     }
 
-    &--gray {
-      border: 0;
-      width: 33.33%;
+    &--leading {
+      .features__desc {
+        background-image: none;
+      }
+    }
+
+    &--second {
+      width: 100% / 3;
 
       .features__desc {
+        margin: 0;
         padding: 45px;
+
+        border: 0;
       }
     }
   }
 
+  .features__desc {
+    min-height: 256px;
+  }
+
   .features__photo {
     width: 100% / 3 * 2;
+    height: 256px;
 
     &--first {
       order: -1;
@@ -133,17 +134,5 @@
 
   .features__title {
     font-size: @font-size-large;
-  }
-}
-
-@media (min-width: @screen-large-width) {
-  .features__item {
-    &:nth-child(1) .features__photo {
-      content: url("../img/features/main-city-desktop@1x.jpg");
-    }
-
-    &:nth-child(2) .features__photo {
-      content: url("../img/features/main-bridge-desktop@1x.jpg");
-    }
   }
 }

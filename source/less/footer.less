@@ -5,24 +5,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  // align-content: center;
   align-items: center;
+  padding-top: 20px;
   min-height: 120px;
 
-  background-color: rgba(254, 254, 254, 0.9);
+  background-color: @body-background-color;
 }
 
 .footer__hashtag {
-  .mixin-link(@default-link-colors);
+  .mixin-apply-link-colors(@default-link-colors);
 
-  margin: 15px;
+  margin: 20px;
 
   font-size: @font-size-large;
 }
 
 .footer__list {
-  margin: 15px;
-  // padding: 0;
+  margin: 20px;
 }
 
 .footer__copyright {
@@ -30,5 +29,11 @@
   align-items: center;
   font-style: normal;
   font-weight: normal;
-  margin: 15px;
+  margin: 20px;
+}
+
+@media (min-width: @screen-medium-width) {
+  .footer {
+    padding: 0;
+  }
 }

@@ -1,6 +1,6 @@
 @import "./variables.less";
 @import "./header.less";
-@import "./main-nav.less";
+@import "./nav.less";
 @import "./main.less";
 @import "./features.less";
 @import "./places-list.less";
@@ -29,6 +29,10 @@
     url("../fonts/ptsansbold.woff") format("woff");
 }
 
+html {
+  box-sizing: border-box;
+}
+
 body {
   padding: 0;
   margin: 0 auto;
@@ -39,11 +43,22 @@ body {
   font-family: @font-family;
   font-size: @font-size-medium;
 
-  background-color: @body-background-color;
+  background-color: @body-second-background-color;
+
+  box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
 .visually-hidden {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /*

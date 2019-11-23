@@ -2,9 +2,87 @@
 @import "./mixins.less";
 
 .header {
-  position: relative;
-  z-index: 1;
+  text-align: center;
+
+  background-color: @body-background-color;
+
+  &__close-icon {
+    display: none;
+  }
+
+  &__open-icon {
+    display: block;
+  }
 }
 
-// .header__nav {
-// }
+.header__nav {
+  &--closed {
+    display: none;
+  }
+}
+
+.header__logo {
+  position: relative;
+  left: 50%;
+
+  display: flex;
+  justify-content: center;
+  width: 0;
+  min-height: @nav-item-height;
+}
+
+.header__logo-image {
+  position: absolute;
+}
+
+.header__menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  width: @nav-item-height;
+  height: @nav-item-height;
+  padding: 0;
+
+  border: 0;
+  background-color: transparent;
+  fill: extract(@default-button-background-colors, 1);
+
+  &--active {
+
+    fill: extract(@default-button-colors, 1);
+
+    .header__close-icon {
+      display: block;
+    }
+
+    .header__open-icon {
+      display: none;
+    }
+  }
+
+  &--nojs {
+    display: none;
+  }
+}
+
+@media (min-width: @screen-medium-width) {
+  .header__nav {
+    &--closed {
+      display: block;
+    }
+  }
+
+  .header__logo {
+    position: absolute;
+    top: 0;
+  }
+
+  .header__menu {
+    display: none;
+  }
+}
