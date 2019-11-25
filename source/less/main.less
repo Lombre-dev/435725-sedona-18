@@ -16,10 +16,10 @@
   background-repeat: no-repeat;
   background-position: 0% 100%, 50% 50%;
   background-size: 100% 26px, auto;
-}
 
-.main__welcome--short {
-  height: 158px;
+  &--short {
+    height: 158px;
+  }
 }
 
 .main__welcome-image {
@@ -27,26 +27,11 @@
   max-height: 69.5%;
   width: auto;
   height: auto;
-}
 
-.main__welcome-image--short {
-  margin-top: -12px;
-  height: 38px;
-}
-
-.main__arrow-start-small,
-.main__arrow-start-medium,
-.main__arrow-start-large {
-  // position: absolute;
-  // bottom: 0;
-  margin-top: auto;
-
-  fill: @body-background-color;
-}
-
-.main__arrow-start-medium,
-.main__arrow-start-large {
-  display: none;
+  &--short {
+    margin-top: -12px;
+    height: 38px;
+  }
 }
 
 .main__container {
@@ -62,6 +47,8 @@
   color: @body-color;
   text-transform: uppercase;
   text-align: center;
+
+  background-color: @body-background-color;
 
   &--form {
     max-width: 440px;
@@ -85,13 +72,6 @@
   line-height: @line-height-medium;
 }
 
-.main__arrow-end {
-  display: block;
-
-  fill: @body-background-color;
-  background-color: @features-default-background-color;
-}
-
 @media (min-width: @screen-medium-width) {
   .main__welcome {
     height: 518px;
@@ -100,10 +80,10 @@
       url("../img/intro/bg-intro-triangle-tablet.svg"),
       url("../img/intro/bg-back-tablet@1x.jpg");
     background-size: 100% 57px, 100%;
-  }
 
-  .main__welcome--short {
-    height: 290px;
+    &--short {
+      height: 290px;
+    }
   }
 
   .main__welcome-image--short {
@@ -127,19 +107,6 @@
       }
     }
   }
-
-  .main__arrow-start-small,
-  .main__arrow-start-large {
-    display: none;
-  }
-
-  .main__arrow-end {
-    display: none;
-  }
-
-  .main__arrow-start-medium {
-    display: block;
-  }
 }
 
 @media (min-width: @screen-large-width) {
@@ -148,14 +115,5 @@
       url("../img/intro/bg-intro-triangle-desktop.svg"),
       url("../img/intro/bg-back-desktop@1x.jpg");
     background-size: 100% 57px, 100%;
-  }
-
-  .main__arrow-start-small,
-  .main__arrow-start-medium {
-    display: none;
-  }
-
-  .main__arrow-start-large {
-    display: block;
   }
 }
