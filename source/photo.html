@@ -10,33 +10,39 @@
 
 <body>
   <header class="header">
-    <nav class="header__nav main-nav">
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a class="main-nav__link" href="./index.html">Главная</a></li>
-        <li class="main-nav__item"><a class="main-nav__link">Фото и видео</a></li> <!-- href="./photo.html" -->
-        <li class="main-nav__item main-nav__item--logo">
-          <a class="main-nav__link main-nav__link--logo" href="./index.html">
-            <img class="main-nav__logo" src="./img/logo/logo-sedona-mobile.svg" width="101.668px" height="83.984px" alt="Логотип Седона">
-          </a>
-        </li>
-        <li class="main-nav__item"><a class="main-nav__link" href="./form.html">Форма отзыва</a></li>
-        <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li> <!-- https://htmlacademy.ru -->
+    <nav class="header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a class="nav__link nav__link--first" href="./index.html">Главная</a></li>
+        <li class="nav__item"><a class="nav__link">Фото и видео</a></li> <!-- href="./photo.html" -->
+        <li class="nav__item"><a class="nav__link" href="./form.html">Форма отзыва</a></li>
+        <li class="nav__item"><a class="nav__link nav__link--last" href="#">HTML Academy</a></li> <!-- https://htmlacademy.ru -->
       </ul>
-      <button class="main-nav__toggle main-nav__toggle--active main-nav__toggle--nojs" type="button">
-        <!-- Креситик -->
-        <svg class="main-nav__close-icon" width="22.199" height="22.199" viewBox="0 0 22.199 22.199">
-          <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
-        </svg>
-        <!-- Креситик -->
-        <!-- Гамбургер -->
-        <svg class="main-nav__open-icon" width="22.928" height="21.982" viewBox="0 0 22.928 21.982">
-          <rect width="22.928" height="3.964" />
-          <rect y="9.009" width="22.928" height="3.964" />
-          <rect y="18.018" width="22.928" height="3.964" />
-        </svg>
-        <!-- Гамбургер -->
-      </button>
     </nav>
+    <a class="header__logo" href="./index.html">
+      <!-- https://developer.mozilla.org/ru/docs/Web/HTML/Element/picture -->
+      <picture class="header__logo-image">
+        <!-- width="187px" height="96px" -->
+        <source media="(min-width: 1200px)" srcset="./img/logo/logo-sedona-desktop.svg">
+        <!-- width="102px" height="84px" -->
+        <source media="(min-width: 768px)" srcset="./img/logo/logo-sedona-tablet.svg">
+        <!-- width="102px" height="84px" -->
+        <img src="./img/logo/logo-sedona-mobile.svg" alt="Логотип Седона">
+      </picture>
+    </a>
+    <button class="header__menu header__menu--active header__menu--nojs" type="button">
+      <!-- Креситик -->
+      <svg class="header__close-icon" width="22.199" height="22.199" viewBox="0 0 22.199 22.199">
+        <polygon points="22.199,2.804 19.396,0 11.1,8.297 2.804,0 0,2.803 8.297,11.1 0,19.396 2.803,22.199 11.1,13.902 19.396,22.199 22.199,19.396 13.903,11.1 " />
+      </svg>
+      <!-- Креситик -->
+      <!-- Гамбургер -->
+      <svg class="header__open-icon" width="22.928" height="21.982" viewBox="0 0 22.928 21.982">
+        <rect width="22.928" height="3.964" />
+        <rect y="9.009" width="22.928" height="3.964" />
+        <rect y="18.018" width="22.928" height="3.964" />
+      </svg>
+      <!-- Гамбургер -->
+    </button>
   </header>
   <main class="main">
 
