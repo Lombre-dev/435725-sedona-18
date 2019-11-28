@@ -59,27 +59,27 @@
       <div class="feedback__fieldset feedback__fieldset--user">
         <p class="feedback__legend">Представьтесь:</p>
         <div class="feedback__container">
-          <label class="feedback__label">Имя*:</label>
-          <input class="feedback__input" type="text" name="first_name" placeholder="Пётр" required>
+          <label class="feedback__label" for="first_name">Имя*:</label>
+          <input class="feedback__input" id="first_name" type="text" name="first_name" placeholder="Пётр" required>
         </div>
         <div class="feedback__container">
-          <label class="feedback__label">Фамилия*:</label>
-          <input class="feedback__input" type="text" name="last_name" placeholder="Иванов" required>
+          <label class="feedback__label" for="last_name">Фамилия*:</label>
+          <input class="feedback__input" id="last_name" type="text" name="last_name" placeholder="Иванов" required>
         </div>
         <div class="feedback__container">
-          <label class="feedback__label">Отчество:</label>
-          <input class="feedback__input" type="text" name="middle_name" placeholder="Александрович">
+          <label class="feedback__label" for="middle_name">Отчество:</label>
+          <input class="feedback__input" id="middle_name" type="text" name="middle_name" placeholder="Александрович">
         </div>
       </div>
       <div class="feedback__fieldset feedback__fieldset--contacts">
         <p class="feedback__legend">Контактная информация:</p>
         <div class="feedback__container">
-          <label class="feedback__label">Контактный телефон*:</label>
-          <input class="feedback__input feedback__input--phone" type="tel" name="phone" placeholder="Введите телефон" required>
+          <label class="feedback__label" for="phone">Контактный телефон*:</label>
+          <input class="feedback__input feedback__input--phone" id="phone" type="tel" name="phone" placeholder="Введите телефон" required>
         </div>
         <div class="feedback__container">
-          <label class="feedback__label">Электронная почта*:</label>
-          <input class="feedback__input feedback__input--email" type="email" name="email" placeholder="Введите e-mail" required>
+          <label class="feedback__label" for="email">Электронная почта*:</label>
+          <input class="feedback__input feedback__input--email" id="email" type="email" name="email" placeholder="Введите e-mail" required>
         </div>
       </div>
       <div class="feedback__fieldset feedback__fieldset--opinion">
@@ -118,9 +118,12 @@
       </div>
       <div class="feedback__fieldset feedback__fieldset--comment">
         <p class="feedback__legend">Опишите свои эмоции:</p>
-        <textarea class="feedback__textarea" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+        <textarea class="feedback__input feedback__input--comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
       </div>
-      <button class="feedback__submit button" type="submit">Отправить отзыв</button>
+      <div class="feedback__fieldset feedback__fieldset--submit">
+        <button class=" feedback__submit button" type="submit">Отправить отзыв</button>
+        <p class="feedback__required">* - Обязательные поля</p>
+      </div>
     </form>
   </main>
   <footer class="footer">

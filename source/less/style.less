@@ -31,6 +31,13 @@
 
 html {
   box-sizing: border-box;
+  background-color: @body-second-background-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 body {
@@ -43,7 +50,7 @@ body {
   font-family: @font-family;
   font-size: @font-size-medium;
 
-  background-color: @body-second-background-color;
+  background-color: @body-background-color;
 
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
