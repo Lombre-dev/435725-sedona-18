@@ -54,8 +54,8 @@
       <h1 class="main__heading">Оставьте свой отзыв</h1>
       <p class="main__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
     </div>
-
-    <form class="feedback" onsubmit="openPopup('#feedback-popup-success');" oninvalid="openPopup('#feedback-popup-failure');" action="https://echo.htmlacademy.ru/courses" method="get" target="blank">
+    <!-- onsubmit="openPopup('#feedback-popup-success');" oninvalid="openPopup('#feedback-popup-failure');" -->
+    <form class="feedback" action="https://echo.htmlacademy.ru/courses" method="get" target="blank">
       <div class="feedback__fieldset feedback__fieldset--user">
         <p class="feedback__legend">Представьтесь:</p>
         <p class="feedback__container">
@@ -75,7 +75,7 @@
         <p class="feedback__legend">Контактная информация:</p>
         <p class="feedback__container">
           <label class="feedback__label" for="phone">Контактный телефон*:</label>
-          <input class="feedback__input feedback__input--phone" id="phone" type="tel" name="phone" placeholder="Введите телефон" required>
+          <input class="feedback__input feedback__input--phone" id="phone" type="tel" name="phone" pattern="[0-9]" placeholder="Введите телефон" required>
         </p>
         <p class="feedback__container">
           <label class="feedback__label" for="email">Электронная почта*:</label>
@@ -121,7 +121,7 @@
         <textarea class="feedback__input feedback__input--comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
       </div>
       <div class="feedback__fieldset feedback__fieldset--submit">
-        <button class=" feedback__submit button" type="submit" onsubmit="console.log('handler');">Отправить отзыв</button>
+        <button class=" feedback__submit button" type="submit">Отправить отзыв</button>
         <p class="feedback__required">* - Обязательные поля</p>
       </div>
     </form>
@@ -133,7 +133,8 @@
           <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <div class="popup__container popup__container--buttons-dark">
-          <button class=" popup__button button" type="button" onclick="closePopup('#feedback-popup-success');">Закрыть окно</button>
+          <!-- onclick="closePopup('#feedback-popup-success');" -->
+          <button class=" popup__button button" type="button">Закрыть окно</button>
         </div>
       </div>
     </div>
@@ -145,7 +146,8 @@
           <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         </div>
         <div class="popup__container popup__container--buttons">
-          <button class=" popup__button button" type="button" onclick="closePopup('#feedback-popup-failure');">Ok</button>
+          <!-- onclick="closePopup('#feedback-popup-failure');" -->
+          <button class=" popup__button button" type="button">Ok</button>
         </div>
       </div>
     </div>
