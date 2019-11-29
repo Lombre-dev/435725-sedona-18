@@ -1,0 +1,78 @@
+@import "./variables.less";
+
+.places-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  padding: 0;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  list-style: none;
+}
+
+.places-list__item {
+  padding: 20px;
+  padding-left: 50px;
+  width: 100%;
+
+  background-repeat: no-repeat;
+  background-size: 38px 38px;
+  background-position: 0 10px;
+
+  &--housing {
+    background-image: url("../img/places/icon-house.svg");
+  }
+
+  &--souvenir {
+    background-image: url("../img/places/icon-gift.svg");
+  }
+
+  &--food {
+    background-image: url("../img/places/icon-burger.svg");
+  }
+}
+
+.places-list__title {
+  margin: 0;
+}
+
+.places-list__text {
+  margin-bottom: 0;
+
+  color: @body-second-color;
+
+  font-size: @font-size-small;
+  line-height: @line-height-small;
+}
+
+@media (min-width: @screen-medium-width) {
+  .places-list {
+    flex-wrap: nowrap;
+    margin: 0;
+
+    text-align: center;
+  }
+
+  .places-list__item {
+    width: 100% / 3;
+    padding: 40px;
+    padding-top: 160px;
+
+    background-position: 50% 60px;
+    background-size: 75px 75px;
+
+    &--souvenir {
+      order: 1;
+    }
+  }
+
+  .places-list__title {
+    font-size: @font-size-large;
+  }
+
+  .places-list__text {
+    margin: 20px 0;
+  }
+}

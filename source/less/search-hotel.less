@@ -1,0 +1,43 @@
+@import "./variables.less";
+
+.search-hotel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-hotel__content {
+  display: flex;
+  flex-direction: column;
+  max-width: 458px;
+  padding: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search-hotel__title {
+  margin: 0;
+  font-size: @font-size-large;
+  // line-height: @line-height-large;
+}
+
+.search-hotel__text {
+  margin: 20px 0;
+
+  font-size: @font-size-small;
+  line-height: @line-height-medium;
+}
+
+.search-hotel__search {
+  height: 58px;
+  padding: 0;
+  margin: 20px 0;
+}
+
+@media (min-width: @screen-medium-width) {
+  .search-hotel__title {
+    margin: 20px 0;
+    font-size: @font-size-extra-large;
+  }
+}

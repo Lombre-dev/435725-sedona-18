@@ -1,0 +1,112 @@
+@import "./variables.less";
+@import "./header.less";
+@import "./nav.less";
+@import "./main.less";
+@import "./features.less";
+@import "./places-list.less";
+@import "./search-hotel.less";
+@import "./photo.less";
+@import "./video.less";
+@import "./socials-list.less";
+@import "./copyright.less";
+@import "./footer.less";
+@import "./feedback.less";
+@import "./popup.less";
+@import "./button.less";
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: normal;
+  src:
+    url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-weight: bold;
+  src:
+    url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
+}
+
+html {
+  box-sizing: border-box;
+  background-color: @body-second-background-color;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0 auto;
+  min-width: @screen-small-width;
+  max-width: @screen-large-width;
+
+  color: @body-color;
+  font-family: @font-family;
+  font-size: @font-size-medium;
+
+  background-color: @body-background-color;
+
+  box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*
+http://codeguide.academy/html-css.html#css-order
+.declaration-order {
+  // Позиционированиe
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  // Блочная модель
+  display: block;
+  float: right;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+
+  // Типографика
+  font: normal 13px/1.5 "Arial", sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.5;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  color: #333333;
+
+  // Оформление
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  opacity: 1;
+
+  // Анимация
+  transition: color 1s;
+
+  // Разное
+  will-change: auto;
+}
+*/

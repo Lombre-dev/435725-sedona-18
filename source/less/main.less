@@ -1,0 +1,114 @@
+@import "./variables.less";
+
+// .main {
+// }
+
+.main__welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 389px;
+
+  background-image:
+    url("../img/intro/bg-intro-triangle-mobile.svg"),
+    url("../img/intro/bg-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 100%, 50% 50%;
+  background-size: 100% 26px, auto;
+
+  &--short {
+    height: 158px;
+  }
+}
+
+.main__welcome-image {
+  max-width: 87.5%;
+  max-height: 69.5%;
+  width: auto;
+  height: auto;
+
+  &--short {
+    margin-top: -12px;
+    height: 38px;
+  }
+}
+
+.main__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 30px;
+  padding-bottom: 0;
+  margin: 0 auto;
+  max-width: 560px;
+
+  color: @body-color;
+  text-transform: uppercase;
+  text-align: center;
+
+  &--form {
+    padding: 30px 20px 10px;
+  }
+
+  &--photo {
+    padding: 30px 25px 10px;
+  }
+}
+
+.main__heading {
+  font-size: @font-size-medium;
+  line-height: @line-height-medium;
+}
+
+.main__text {
+  color: @body-second-color;
+  font-size: @font-size-small;
+  line-height: @line-height-medium;
+}
+
+@media (min-width: @screen-medium-width) {
+  .main__welcome {
+    height: 518px;
+
+    background-image:
+      url("../img/intro/bg-intro-triangle-tablet.svg"),
+      url("../img/intro/bg-back-tablet@1x.jpg");
+    background-size: 100% 57px, 100%;
+
+    &--short {
+      height: 290px;
+    }
+  }
+
+  .main__welcome-image--short {
+    margin-top: -22px;
+    height: 78px;
+  }
+
+  .main__container {
+    padding: 30px;
+
+    .main__heading {
+      font-size: @font-size-large;
+    }
+
+    &--form,
+    &--photo {
+      padding: 50px;
+
+      .main__heading {
+        font-size: @font-size-extra-large;
+      }
+    }
+  }
+}
+
+@media (min-width: @screen-large-width) {
+  .main__welcome {
+    background-image:
+      url("../img/intro/bg-intro-triangle-desktop.svg"),
+      url("../img/intro/bg-back-desktop@1x.jpg");
+    background-size: 100% 57px, 100%;
+  }
+}

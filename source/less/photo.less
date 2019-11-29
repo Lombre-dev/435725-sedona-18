@@ -1,0 +1,141 @@
+@import "./variables.less";
+@import "./mixins.less";
+
+// .photo {
+// }
+
+.photo__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.photo__item {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  font-size: @font-size-small;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+// .photo__content {
+//   // flex-grow: 1;
+//   // flex-basis: 280px;
+// }
+
+.photo__caption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // align-items: flex-start;
+  padding: 20px 0 0 0;
+}
+
+.photo__title {
+  margin: 0;
+  margin-bottom: 4px;
+
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.photo__author {
+  margin: 0;
+}
+
+.photo__like {
+  // .mixin-apply-svg-link-colors(@default-link-colors);
+
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  margin: 0;
+
+  font-family: @font-family;
+  font-size: @font-size-small;
+  font-weight: bold;
+
+  fill: red;
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
+
+.photo__icon {
+  padding-right: 10px;
+  fill: red;
+}
+
+@media (min-width: @screen-medium-width) {
+  .photo__item {
+    padding: 0;
+
+    border-top: 0;
+  }
+
+  .photo__caption {
+    flex-direction: row;
+    padding: 20px;
+
+    background-color: #f2f2f2;
+  }
+
+  .photo__item:nth-child(1) .photo__content {
+    content: url("../img/photo/photo-sunset-tablet@1x.jpg");
+  }
+
+  .photo__item:nth-child(2) .photo__content {
+    content: url("../img/photo/photo-cactus-tablet@1x.jpg");
+  }
+
+  .photo__item:nth-child(3) .photo__content {
+    content: url("../img/photo/photo-roads-tablet@1x.jpg");
+  }
+
+  .photo__item:nth-child(4) .photo__content {
+    content: url("../img/photo/photo-bridge-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: @screen-large-width) {
+  .photo__caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    color: white;
+
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .photo__like {
+    color: white;
+  }
+
+  .photo__item:nth-child(1) .photo__content {
+    content: url("../img/photo/photo-sunset-desktop@1x.jpg");
+  }
+
+  .photo__item:nth-child(2) .photo__content {
+    content: url("../img/photo/photo-cactus-desktop@1x.jpg");
+  }
+
+  .photo__item:nth-child(3) .photo__content {
+    content: url("../img/photo/photo-roads-desktop@1x.jpg");
+  }
+
+  .photo__item:nth-child(4) .photo__content {
+    content: url("../img/photo/photo-bridge-desktop@1x.jpg");
+  }
+}

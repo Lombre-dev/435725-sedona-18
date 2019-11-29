@@ -1,0 +1,60 @@
+.mixin-apply-button-colors(@text-colors; @background-colors) {
+  color: extract(@text-colors, 1);
+
+  background-color: extract(@background-colors, 1);
+
+  &:focus,
+  &:hover {
+    color: extract(@text-colors, 2);
+
+    background-color: extract(@background-colors, 2);
+  }
+
+  &:active {
+    color: extract(@text-colors, 3);
+
+    background-color: extract(@background-colors, 3);
+  }
+
+  &:disabled {
+    color: extract(@text-colors, 4);
+
+    background-color: extract(@background-colors, 4);
+  }
+}
+
+.mixin-apply-link-colors(@colors) {
+
+  color: extract(@colors, 1);
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  // cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: extract(@colors, 2);
+  }
+
+  &:active {
+    color: extract(@colors, 3);
+  }
+}
+
+.mixin-apply-svg-link-colors(@colors) {
+
+  fill: extract(@colors, 1);
+
+  &:hover {
+    fill: extract(@colors, 2);
+  }
+
+  &:active {
+    fill: extract(@colors, 3);
+  }
+
+  &:disabled {
+    color: extract(@colors, 4);
+  }
+}
