@@ -18,3 +18,11 @@ var addMenuHandlers = function () {
 };
 
 addMenuHandlers();
+
+function openPopup(target) {
+  document.querySelector(target).classList.remove("popup--closed");
+}
+
+function closePopup(target) {
+  document.querySelector(target).classList.add("popup--closed");
+}

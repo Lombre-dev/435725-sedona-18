@@ -63,7 +63,7 @@
 .feedback__container {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
 .feedback__legend {
@@ -126,7 +126,7 @@
   }
 }
 
-.feedback__radio {
+.feedback__toggle {
   display: none;
 
   & + .feedback__label::before {
@@ -137,67 +137,48 @@
 
     vertical-align: middle;
 
-    border-radius: 50%;
     background-color: extract(@toggle-background-colors, 1);
     background-position: 50%;
     background-repeat: no-repeat;
-    background-size: 21px;
 
     content: "";
   }
 
-  &:checked + .feedback__label::before {
+  &:hover + .feedback__label::before {
+    background-color: extract(@toggle-background-colors, 2);
+  }
+
+  &:active + .feedback__label::before {
+    background-color: extract(@toggle-background-colors, 3);
+  }
+
+  &:disabled + .feedback__label::before {
+    background-color: extract(@toggle-background-colors, 4);
+  }
+
+  &--radio + .feedback__label::before {
+    border-radius: 50%;
+    background-size: 21px;
+  }
+
+  &--radio:checked + .feedback__label::before {
     background-image: url("../img/form/icon-radio.svg");
   }
 
-  &:hover + .feedback__label::before {
-    background-color: extract(@toggle-background-colors, 2);
-  }
-
-  &:active + .feedback__label::before {
+  &--radio:active + .feedback__label::before {
     background-image: url("../img/form/icon-radio-down.svg");
-    background-color: extract(@toggle-background-colors, 3);
   }
 
-  &:disabled + .feedback__label::before {
-    background-color: extract(@toggle-background-colors, 4);
-  }
-}
-
-.feedback__check {
-  display: none;
-
-  & + .feedback__label::before {
-    display: inline-block;
-    width: 58px;
-    height: 58px;
-    margin-right: 20px;
-
-    vertical-align: middle;
-
+  &--check + .feedback__label::before {
     border-radius: 5px;
-    background-color: extract(@toggle-background-colors, 1);
-    background-position: 50%;
-    background-repeat: no-repeat;
-
-    content: "";
   }
 
-  &:checked + .feedback__label::before {
+  &--check:checked + .feedback__label::before {
     background-image: url("../img/form/icon-tick.svg");
   }
 
-  &:hover + .feedback__label::before {
-    background-color: extract(@toggle-background-colors, 2);
-  }
-
-  &:active + .feedback__label::before {
+  &--check:active + .feedback__label::before {
     background-image: url("../img/form/icon-tick-down.svg");
-    background-color: extract(@toggle-background-colors, 3);
-  }
-
-  &:disabled + .feedback__label::before {
-    background-color: extract(@toggle-background-colors, 4);
   }
 }
 
@@ -214,6 +195,14 @@
 
   font-size: @font-size-small;
   text-transform: uppercase;
+}
+
+.feedback__popup-success {
+  max-width: 640px;
+}
+
+.feedback__popup-failure {
+  max-width: 400px;
 }
 
 @media (min-width: @screen-medium-width) {
@@ -317,7 +306,7 @@
   }
 
   .feedback__required {
-    display: block;
+    display: inline;
   }
 }
 
