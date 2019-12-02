@@ -1,1 +1,47 @@
 @import "./variables.less";
+
+.video__wrapper {
+  width: 100%;
+  max-width: 648px;
+  margin: 0 auto;
+}
+
+.video__content {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video__controls {
+  width: 100%;
+  padding: 0 20px;
+}
+
+.video__timeline {
+  padding: 20px;
+  width: 100%;
+  height: 45px;
+
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.video__timeline-line {
+  height: 3px;
+
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video__timeline-seek {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+  background-color: white;
+}
+
+@media (min-width: @screen-medium-width) {
+  .video__wrapper {
+    width: 84.375%;
+    max-width: 800px;
+  }
+}

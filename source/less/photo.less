@@ -1,16 +1,13 @@
 @import "./variables.less";
 @import "./mixins.less";
 
-// .photo {
-// }
-
 .photo__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: space-evenly;
   padding: 0;
   margin: 0;
+  width: 100%;
 
   list-style: none;
 }
@@ -27,16 +24,20 @@
   border-top: 1px solid #e5e5e5;
 }
 
-// .photo__content {
-//   // flex-grow: 1;
-//   // flex-basis: 280px;
-// }
+.photo__content {
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
 
 .photo__caption {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // align-items: flex-start;
   padding: 20px 0 0 0;
 }
 
@@ -56,7 +57,7 @@
   // .mixin-apply-svg-link-colors(@default-link-colors);
 
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   padding: 10px 0;
   margin: 0;
 
@@ -64,22 +65,56 @@
   font-size: @font-size-small;
   font-weight: bold;
 
-  fill: red;
+  fill: @body-color;
+  fill-opacity: 0.3;
+
   border: 0;
-  outline: none;
   background-color: transparent;
 }
 
 .photo__icon {
-  padding-right: 10px;
-  fill: red;
+  margin-right: 10px;
 }
 
 @media (min-width: @screen-medium-width) {
+  .photo__list {
+    justify-content: flex-start;
+    width: 84.375%;
+    margin: 0 auto;
+  }
+
   .photo__item {
     padding: 0;
 
     border-top: 0;
+
+    &--leading {
+      width: 100%;
+
+      .photo__content {
+        height: 400px;
+      }
+    }
+
+    &--second {
+      width: 50%;
+
+      .photo__content {
+        height: 267px;
+      }
+    }
+
+    &:nth-child(2n + 3) {
+      .photo__caption {
+        background-color: #eaeaea;
+      }
+    }
+  }
+
+  .photo__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   .photo__caption {
@@ -88,25 +123,25 @@
 
     background-color: #f2f2f2;
   }
-
-  .photo__item:nth-child(1) .photo__content {
-    content: url("../img/photo/photo-sunset-tablet@1x.jpg");
-  }
-
-  .photo__item:nth-child(2) .photo__content {
-    content: url("../img/photo/photo-cactus-tablet@1x.jpg");
-  }
-
-  .photo__item:nth-child(3) .photo__content {
-    content: url("../img/photo/photo-roads-tablet@1x.jpg");
-  }
-
-  .photo__item:nth-child(4) .photo__content {
-    content: url("../img/photo/photo-bridge-tablet@1x.jpg");
-  }
 }
 
 @media (min-width: @screen-large-width) {
+  .photo__list {
+    width: 100%;
+  }
+
+  .photo__item {
+    &--second {
+      width: 100% / 3;
+    }
+
+    &:nth-child(2n + 3) {
+      .photo__caption {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
   .photo__caption {
     position: absolute;
     left: 0;
@@ -121,21 +156,7 @@
 
   .photo__like {
     color: white;
-  }
-
-  .photo__item:nth-child(1) .photo__content {
-    content: url("../img/photo/photo-sunset-desktop@1x.jpg");
-  }
-
-  .photo__item:nth-child(2) .photo__content {
-    content: url("../img/photo/photo-cactus-desktop@1x.jpg");
-  }
-
-  .photo__item:nth-child(3) .photo__content {
-    content: url("../img/photo/photo-roads-desktop@1x.jpg");
-  }
-
-  .photo__item:nth-child(4) .photo__content {
-    content: url("../img/photo/photo-bridge-desktop@1x.jpg");
+    fill: white;
+    fill-opacity: 1;
   }
 }
