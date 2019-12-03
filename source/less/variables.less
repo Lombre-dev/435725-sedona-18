@@ -16,7 +16,7 @@
   #ffffff, // normal
   #ffffff, // hover
   rgba(255, 255, 255, 0.3), // down
-  #ffffff; // disabled
+  rgba(255, 255, 255, 0.2); // disabled
 
 // цвета фона для кнопок
 @default-button-background-colors: #81b3d2, #669ec0, #5496bd, #e5e5e5;
@@ -42,8 +42,6 @@
 // main-nav >>>
 // высота элемента в навигации, что-то вроде flex-basis
 @nav-item-height: 56px;
-// ширина рамки, испольузется пока один раз, скорее относится к default-button-border
-@main-nav-item-border-width: 1px;
 // main-nav <<<
 
 // form.html >>>
@@ -55,6 +53,22 @@
 // цвет для декоративных бордеров
 @fieldset-border-top-color: #e5e5e5;
 // form.html <<<
+
+// photo & video >>>
+@photo-item-border-color: #e5e5e5;
+
+@photo-caption-color: @body-color;
+@photo-caption-background-color: #f2f2f2;
+@photo-caption-background-color2: #eaeaea;
+@photo-caption-second-color: #ffffff;
+@photo-caption-second-background-color: rgba(0, 0, 0, 0.3);
+
+@video-controls-colors: #5c6870, #333333, rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.2);
+@video-controls-background-color: #f2f2f2;
+@video-controls-second-colors: #ffffff, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.2);
+@video-controls-second-background-color: rgba(0, 0, 0, 0.6);
+@video-controls-timeline-color: rgba(255, 255, 255, 0.2);
+// photo & video <<<
 
 @font-family: "PT Sans", Arial, sans-serif;
 @font-size-small: 14px;
