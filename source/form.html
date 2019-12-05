@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="./css/style.css">
+  <script src="js/picturefill.min.js"></script>
 </head>
 
 <body>
@@ -19,14 +20,10 @@
       </ul>
     </nav>
     <a class="header__logo" href="./index.html">
-      <!-- https://developer.mozilla.org/ru/docs/Web/HTML/Element/picture -->
-      <picture class="header__logo-image">
-        <!-- width="187px" height="96px" -->
-        <source media="(min-width: 1200px)" srcset="./img/logo/logo-sedona-desktop.svg">
-        <!-- width="102px" height="84px" -->
-        <source media="(min-width: 768px)" srcset="./img/logo/logo-sedona-tablet.svg">
-        <!-- width="102px" height="84px" -->
-        <img src="./img/logo/logo-sedona-mobile.svg" alt="Логотип Седона">
+      <picture>
+        <source media="(min-width: 1200px)" srcset="./img/logo/logo-sedona-desktop.svg"> <!-- width="187px" height="96px" -->
+        <source media="(min-width: 768px)" srcset="./img/logo/logo-sedona-tablet.svg"> <!-- width="102px" height="84px" -->
+        <img class="header__logo-image" src="./img/logo/logo-sedona-mobile.svg" width="102px" height="84px" alt="Логотип Седона">
       </picture>
     </a>
     <button class="header__menu header__menu--active header__menu--nojs" type="button">
@@ -54,7 +51,6 @@
       <h1 class="main__heading">Оставьте свой отзыв</h1>
       <p class="main__text">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
     </div>
-    <!-- onsubmit="openPopup('#feedback-popup-success');" oninvalid="openPopup('#feedback-popup-failure');" -->
     <form class="feedback" action="https://echo.htmlacademy.ru/courses" method="get" target="blank">
       <div class="feedback__fieldset feedback__fieldset--user">
         <p class="feedback__legend">Представьтесь:</p>
@@ -75,50 +71,56 @@
         <p class="feedback__legend">Контактная информация:</p>
         <p class="feedback__container">
           <label class="feedback__label" for="phone">Контактный телефон*:</label>
-          <input class="feedback__input feedback__input--phone" id="phone" type="tel" name="phone" pattern="[0-9]" placeholder="Введите телефон" required>
+          <span class="feedback__input-wrapper feedback__input-wrapper--phone"><input class="feedback__input feedback__input--phone" id="phone" type="tel" name="phone" pattern="[0-9]" placeholder="Введите телефон" required></span>
         </p>
-        <p class="feedback__container">
+        <p class="feedback__container feedback__container--email">
           <label class="feedback__label" for="email">Электронная почта*:</label>
-          <input class="feedback__input feedback__input--email" id="email" type="email" name="email" placeholder="Введите e-mail" required>
+          <span class="feedback__input-wrapper feedback__input-wrapper--email"><input class="feedback__input feedback__input--email" id="email" type="email" name="email" placeholder="Введите e-mail" required></span>
         </p>
       </div>
       <div class="feedback__fieldset feedback__fieldset--opinion">
         <p class="feedback__legend">Ваше общее впечатление:</p>
-        <p class="feedback__container">
-          <input class="feedback__toggle feedback__toggle--radio" id="opinion-1" type="radio" name="opinion" value="1" checked>
-          <label class="feedback__label" for="opinion-1">Скорее положительные</label>
-        </p>
-        <p class="feedback__container">
-          <input class="feedback__toggle feedback__toggle--radio" id="opinion-2" type="radio" name="opinion" value="-1">
-          <label class="feedback__label" for="opinion-2">Скорее отрицательные</label>
-        </p>
-        <p class="feedback__container">
-          <input class="feedback__toggle feedback__toggle--radio" id="opinion-3" type="radio" name="opinion" value="0">
-          <label class="feedback__label" for="opinion-3">Затрудняюсь ответить</label>
-        </p>
+        <div class="feedback__toggles-wrapper feedback__toggles-wrapper--opinion">
+          <p class="feedback__container">
+            <input class="feedback__toggle feedback__toggle--radio" id="opinion-1" type="radio" name="opinion" value="1" checked>
+            <label class="feedback__label" for="opinion-1">Скорее положительные</label>
+          </p>
+          <p class="feedback__container">
+            <input class="feedback__toggle feedback__toggle--radio" id="opinion-2" type="radio" name="opinion" value="-1">
+            <label class="feedback__label" for="opinion-2">Скорее отрицательные</label>
+          </p>
+          <p class="feedback__container">
+            <input class="feedback__toggle feedback__toggle--radio" id="opinion-3" type="radio" name="opinion" value="0">
+            <label class="feedback__label" for="opinion-3">Затрудняюсь ответить</label>
+          </p>
+        </div>
       </div>
       <div class="feedback__fieldset feedback__fieldset--places">
         <p class="feedback__legend">Посещённые достопримечательности:</p>
-        <p class="feedback__container">
-          <input class="feedback__toggle feedback__toggle--check" id="place-1" type="checkbox" name="places" value="0" checked>
-          <label class="feedback__label" for="place-1">Мост Дьявола</label>
-        </p>
-        <p class="feedback__container">
-          <input class="feedback__toggle feedback__toggle--check" id="place-2" type="checkbox" name="places" value="1" checked>
-          <label class="feedback__label" for="place-2">Гора-Колокол</label>
-        </p>
-        <p class="feedback__container">
-          <input class="feedback__toggle feedback__toggle--check" id="place-3" type="checkbox" name="places" value="2" checked>
-          <label class="feedback__label" for="place-3">Слайд-парк</label>
-        </p>
-        <p class="feedback__container">
-          <input class="feedback__toggle feedback__toggle--check" id="place-4" type="checkbox" name="places" value="3">
-          <label class="feedback__label" for="place-4">Красные скалы</label>
-        </p>
+        <div class="feedback__toggles-wrapper feedback__toggles-wrapper--places">
+          <p class="feedback__container">
+            <input class="feedback__toggle feedback__toggle--check" id="place-1" type="checkbox" name="places" value="0" checked>
+            <label class="feedback__label" for="place-1">Мост Дьявола</label>
+          </p>
+          <p class="feedback__container">
+            <input class="feedback__toggle feedback__toggle--check" id="place-2" type="checkbox" name="places" value="1" checked>
+            <label class="feedback__label" for="place-2">Гора-Колокол</label>
+          </p>
+          <p class="feedback__container">
+            <input class="feedback__toggle feedback__toggle--check" id="place-3" type="checkbox" name="places" value="2" checked>
+            <label class="feedback__label" for="place-3">Слайд-парк</label>
+          </p>
+          <p class="feedback__container">
+            <input class="feedback__toggle feedback__toggle--check" id="place-4" type="checkbox" name="places" value="3">
+            <label class="feedback__label" for="place-4">Красные скалы</label>
+          </p>
+        </div>
       </div>
       <div class="feedback__fieldset feedback__fieldset--comment">
-        <p class="feedback__legend">Опишите свои эмоции:</p>
-        <textarea class="feedback__input feedback__input--comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
+        <label for="comment">
+          <p class="feedback__legend">Опишите свои эмоции:</p>
+        </label>
+        <textarea class="feedback__input feedback__input--comment" id="comment" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
       </div>
       <div class="feedback__fieldset feedback__fieldset--submit">
         <button class=" feedback__submit button" type="submit">Отправить отзыв</button>
@@ -133,7 +135,6 @@
           <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         </div>
         <div class="popup__container popup__container--buttons-dark">
-          <!-- onclick="closePopup('#feedback-popup-success');" -->
           <button class=" popup__button button" type="button">Закрыть окно</button>
         </div>
       </div>
@@ -146,7 +147,6 @@
           <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         </div>
         <div class="popup__container popup__container--buttons">
-          <!-- onclick="closePopup('#feedback-popup-failure');" -->
           <button class=" popup__button button" type="button">Ok</button>
         </div>
       </div>
