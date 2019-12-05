@@ -82,13 +82,14 @@
   line-height: @line-height-small;
 }
 
-.features__photo {
+.features__photo-wrapper {
   overflow: hidden;
+}
 
-  img {
-    display: block;
-    width: 100%;
-  }
+.features__photo {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 @media (min-width: @screen-medium-width) {
@@ -122,7 +123,7 @@
     min-height: 256px;
   }
 
-  .features__photo {
+  .features__photo-wrapper {
     width: 100% / 3 * 2;
     height: 256px;
 
