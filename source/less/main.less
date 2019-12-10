@@ -10,7 +10,7 @@
     url("../img/intro/bg-intro-triangle-mobile.svg"),
     url("../img/intro/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: 0% 100%, 50% 50%;
+  background-position: 0% 100%, 50% 100%;
   background-size: 100% 26px, auto;
 
   &--short {
@@ -25,8 +25,8 @@
   height: auto;
 
   &--short {
-    margin-top: -12px;
-    height: 38px;
+    margin-top: -20px;
+    height: 40px;
   }
 }
 
@@ -45,20 +45,23 @@
   text-align: center;
 
   &--form {
-    padding: 30px 20px 10px;
+    padding: 25px 20px 5px;
   }
 
-  &--photo {
-    padding: 30px 25px 10px;
+  &--photo,
+  &--photo2 {
+    padding: 25px 25px 17.5px;
   }
 }
 
 .main__heading {
+  margin: 10px 0;
   font-size: @font-size-medium;
   line-height: @line-height-medium;
 }
 
 .main__text {
+  margin: 15px 0 6px;
   color: @body-second-color;
   font-size: @font-size-small;
   line-height: @line-height-medium;
@@ -67,7 +70,7 @@
 @media (min-resolution: @screen-retina) {
   .main__welcome {
     background-image:
-      url("../img/intro/bg-intro-triangle-tablet.svg"),
+      url("../img/intro/bg-intro-triangle-mobile.svg"),
       url("../img/intro/bg-back-mobile@2x.jpg");
   }
 }
@@ -86,26 +89,43 @@
     }
   }
 
-  .main__welcome-image--short {
-    margin-top: -22px;
-    height: 78px;
+  .main__welcome-image {
+    margin-top: -15px;
+
+    &--short {
+      margin-top: -20px;
+      height: 80px;
+    }
   }
 
   .main__container {
-    padding: 30px;
-
-    .main__heading {
-      font-size: @font-size-large;
-    }
+    padding: 40px 30px;
 
     &--form,
-    &--photo {
-      padding: 50px;
+    &--photo,
+    &--photo2 {
+      padding: 62.5px 50px 55px;
 
       .main__heading {
         font-size: @font-size-extra-large;
       }
+
+      .main__text {
+        margin-top: 20px;
+      }
     }
+
+    &--photo2 {
+      padding: 55px 50px;
+    }
+  }
+
+  .main__heading {
+    font-size: @font-size-large;
+  }
+
+  .main__text {
+    margin-bottom: 12.5px;
   }
 }
 
@@ -124,13 +144,31 @@
       url("../img/intro/bg-intro-triangle-desktop.svg"),
       url("../img/intro/bg-back-desktop@1x.jpg");
     background-size: 100% 57px, 100%;
+
+    &--short {
+      height: 300px;
+    }
+  }
+
+  .main__container {
+    &--form {
+      padding: 100px 50px 45px;
+    }
+
+    &--photo {
+      padding: 100px 50px 55px;
+    }
+
+    &--photo2 {
+      padding: 60px 50px 55px;
+    }
   }
 }
 
 @media (min-width: @screen-large-width) and (min-resolution: @screen-retina) {
   .main__welcome {
     background-image:
-      url("../img/intro/bg-intro-triangle-tablet.svg"),
+      url("../img/intro/bg-intro-triangle-desktop.svg"),
       url("../img/intro/bg-back-desktop@2x.jpg");
   }
 }

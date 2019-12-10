@@ -5,6 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  max-width: 960px;
 }
 
 .feedback__fieldset {
@@ -12,7 +13,7 @@
   flex-direction: column;
   margin: 0;
   padding: 0 20px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   width: 100%;
 
   border-top: 1px solid @fieldset-border-color;
@@ -26,7 +27,7 @@
 
   &--user {
     .feedback__label {
-      padding-right: 14px;
+      margin-right: 15px;
     }
   }
 
@@ -37,8 +38,8 @@
     }
 
     .feedback__label {
-      padding-left: 14px;
-      padding-bottom: 14px;
+      margin-left: 15px;
+      margin-bottom: 15px;
     }
   }
 
@@ -50,8 +51,15 @@
     }
   }
 
+  &--opinion {
+    .feedback__container {
+      margin-bottom: 15px;
+    }
+  }
+
   &--places {
     .feedback__container {
+      margin-bottom: 22.5px;
       width: 220px;
     }
   }
@@ -59,7 +67,7 @@
   &--submit {
     flex-direction: row;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 35px;
     margin-bottom: 30px;
 
     border-top: 0;
@@ -74,6 +82,7 @@
 
 .feedback__legend {
   width: 100%;
+  margin: 20px 0;
 
   font-weight: bold;
   text-align: center;
@@ -160,8 +169,8 @@
 
   & + .feedback__label::before {
     display: inline-block;
-    width: 58px;
-    height: 58px;
+    width: 56px;
+    height: 56px;
     margin-right: 20px;
 
     vertical-align: middle;
@@ -221,6 +230,7 @@
 
 .feedback__required {
   display: none;
+  margin: auto 0;
 
   font-size: @font-size-small;
   text-transform: uppercase;
@@ -251,7 +261,7 @@
 
       .feedback__legend {
         margin-top: 0;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
 
         text-align: left;
       }
@@ -269,17 +279,29 @@
 
     &--opinion {
       order: -1;
+
+      .feedback__container {
+        margin-bottom: 22.5px;
+      }
     }
 
-    &--contacts,
-    &--places {
+    &--contacts {
       .feedback__legend {
         margin-top: 70px;
         margin-bottom: 30px;
       }
+
+      .feedback__container {
+        margin-bottom: 25px;
+      }
     }
 
     &--places {
+      .feedback__legend {
+        margin-top: 40px;
+        margin-bottom: 57.5px;
+      }
+
       .feedback__container {
         margin-bottom: 30px;
       }
@@ -287,8 +309,7 @@
 
     &--comment {
       .feedback__legend {
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin: 37.5px 0 55px;
       }
     }
 
@@ -342,12 +363,6 @@
 
 @media (min-width: @screen-large-width) {
   .feedback__fieldset {
-    &--places {
-      .feedback__container {
-        width: auto;
-      }
-    }
-
     &--opinion {
       .feedback__legend {
         text-align: center;
@@ -365,10 +380,34 @@
         width: 45%;
       }
 
-      .feedback__label {
-        padding: 0;
-        padding-right: 14px;
+      .feedback__legend {
+        margin: 62.5px 0 75px;
       }
+
+      .feedback__label {
+        margin: 0;
+        margin-right: 15px;
+      }
+    }
+
+    &--places {
+      .feedback__container {
+        width: auto;
+      }
+
+      .feedback__legend {
+        margin: 40px 0 55px;
+      }
+    }
+
+    &--comment {
+      .feedback__legend {
+        margin: 35px 0 55px;
+      }
+    }
+
+    &--submit {
+      margin-bottom: 70px;
     }
   }
 

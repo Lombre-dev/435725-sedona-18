@@ -3,7 +3,7 @@
 .places-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  margin: 22px 20px;
   padding: 0;
 
   text-align: left;
@@ -13,7 +13,7 @@
 }
 
 .places-list__item {
-  padding: 20px;
+  padding: 16px;
   padding-left: 50px;
   width: 100%;
 
@@ -39,6 +39,7 @@
 }
 
 .places-list__text {
+  margin-top: 15px;
   margin-bottom: 0;
 
   color: @body-second-color;
@@ -57,8 +58,7 @@
 
   .places-list__item {
     width: 100% / 3;
-    padding: 40px;
-    padding-top: 160px;
+    padding: 160px 40px 62.5px;
 
     background-position: 50% 60px;
     background-size: 75px 75px;
@@ -73,6 +73,12 @@
   }
 
   .places-list__text {
-    margin: 20px 0;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: @screen-large-width) {
+  .places-list__item {
+    padding: 160px 40px 82.5px;
   }
 }
