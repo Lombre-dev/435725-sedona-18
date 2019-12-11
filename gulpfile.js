@@ -40,7 +40,7 @@ gulp.task("server", function () {
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));
-  gulp.watch("source/img/**/icon-*.svg", gulp.series("make-icons", "make-htmls", "refresh"));
+  gulp.watch("source/img/**/icon-*.svg", gulp.series("make-icons", "refresh"));
   gulp.watch("source/*.html").on("change", gulp.series("make-htmls", "refresh"));
 });
 
@@ -60,13 +60,16 @@ gulp.task("optimize-imgs", function () {
 });
 
 gulp.task("make-webps", function () {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src("source/img/**/*.{png,jpg,jpeg}")
     .pipe(webp({ quality: 95 }))
     .pipe(gulp.dest("build/img"))
 });
 
 gulp.task("make-icons", function () {
-  return gulp.src("source/img/**/icon-*.svg")
+  return gulp.src([
+    "source/img/**/icon-*.svg",
+    "source/img/copyright/logo-htmlacademy.svg"
+  ])
     .pipe(svgstore({ inlineSvg: true }))
     .pipe(rename("icons.svg"))
     .pipe(gulp.dest("build/img"));
@@ -101,9 +104,9 @@ gulp.task("build", gulp.series(
   "clean",
   "copy",
   "css",
-  "make-icons",
   "make-webps",
   "optimize-imgs",
+  "make-icons",
   "make-htmls"
 ));
 
