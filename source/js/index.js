@@ -19,6 +19,9 @@ function addMenuHandlers() {
 
 function showGoogleMap() {
   var map = document.querySelector(".search-hotel__map--nojs");
+  if (!map) {
+    return;
+  }
   map.classList.remove("search-hotel__map--nojs");
 }
 
