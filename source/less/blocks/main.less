@@ -1,14 +1,13 @@
-@import "./variables.less";
-
 .main__welcome {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 389px;
 
+  background-color: extract(@default-button-background-colors, 1);
   background-image:
-    url("../img/intro/bg-intro-triangle-mobile.svg"),
-    url("../img/intro/bg-back-mobile@1x.jpg");
+    url("../../img/intro/bg-intro-triangle-mobile.svg"),
+    url("../../img/intro/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0% 100%, 50% 100%;
   background-size: 100% 26px, auto 389px;
@@ -74,8 +73,8 @@
 @media (min-resolution: @screen-retina) {
   .main__welcome {
     background-image:
-      url("../img/intro/bg-intro-triangle-mobile.svg"),
-      url("../img/intro/bg-back-mobile@2x.jpg");
+      url("../../img/intro/bg-intro-triangle-mobile.svg"),
+      url("../../img/intro/bg-back-mobile@2x.jpg");
   }
 }
 
@@ -84,8 +83,8 @@
     height: 518px;
 
     background-image:
-      url("../img/intro/bg-intro-triangle-tablet.svg"),
-      url("../img/intro/bg-back-tablet@1x.jpg");
+      url("../../img/intro/bg-intro-triangle-tablet.svg"),
+      url("../../img/intro/bg-back-tablet@1x.jpg");
     background-size: 100% 57px, 100%;
 
     &--short {
@@ -138,16 +137,16 @@
 @media (min-width: @screen-medium-width) and (min-resolution: @screen-retina) {
   .main__welcome {
     background-image:
-      url("../img/intro/bg-intro-triangle-tablet.svg"),
-      url("../img/intro/bg-back-tablet@2x.jpg");
+      url("../../img/intro/bg-intro-triangle-tablet.svg"),
+      url("../../img/intro/bg-back-tablet@2x.jpg");
   }
 }
 
 @media (min-width: @screen-large-width) {
   .main__welcome {
     background-image:
-      url("../img/intro/bg-intro-triangle-desktop.svg"),
-      url("../img/intro/bg-back-desktop@1x.jpg");
+      url("../../img/intro/bg-intro-triangle-desktop.svg"),
+      url("../../img/intro/bg-back-desktop@1x.jpg");
 
     &--short {
       height: 300px;
@@ -172,7 +171,7 @@
 @media (min-width: @screen-large-width) and (min-resolution: @screen-retina) {
   .main__welcome {
     background-image:
-      url("../img/intro/bg-intro-triangle-desktop.svg"),
-      url("../img/intro/bg-back-desktop@2x.jpg");
+      url("../../img/intro/bg-intro-triangle-desktop.svg"),
+      url("../../img/intro/bg-back-desktop@2x.jpg");
   }
 }

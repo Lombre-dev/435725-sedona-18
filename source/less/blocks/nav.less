@@ -1,6 +1,3 @@
-@import "./variables.less";
-@import "./mixins.less";
-
 .nav {
   font-weight: bold;
   text-transform: uppercase;
@@ -19,10 +16,6 @@
     display: none;
   }
 }
-
-// пока что все стили ушли в link
-// .nav__item {
-// }
 
 .nav__link {
   .mixin-apply-button-colors(@default-button-colors, @default-button-background-colors);
@@ -72,5 +65,9 @@
     padding: 19px;
 
     box-shadow: none;
+
+    &--active {
+      .mixin-apply-button-colors(@default-active-link-colors, @background-colors);
+    }
   }
 }
