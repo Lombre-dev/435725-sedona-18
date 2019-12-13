@@ -1,8 +1,7 @@
-// @import "./variables.less";
-
 .places-list {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
   margin: 22px 20px;
   padding: 0;
 
@@ -15,10 +14,9 @@
 .places-list__item {
   padding: 16px;
   padding-left: 50px;
-  width: 100%;
 
   background-repeat: no-repeat;
-  background-size: 38px 38px;
+  background-size: auto 38px;
   background-position: 0 10px;
 
   &--housing {
@@ -58,10 +56,10 @@
 
   .places-list__item {
     width: 100% / 3;
-    padding: 160px 40px 62.5px;
+    padding: 160px 45px 62.5px;
 
     background-position: 50% 60px;
-    background-size: 75px 75px;
+    background-size: auto 75px;
 
     &--souvenir {
       order: 1;
@@ -79,6 +77,7 @@
 
 @media (min-width: @screen-large-width) {
   .places-list__item {
-    padding-bottom: 82.5px;
+    min-height: 330px;
+    padding: 160px 50px 20px;
   }
 }

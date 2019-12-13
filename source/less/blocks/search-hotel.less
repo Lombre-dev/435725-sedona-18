@@ -24,6 +24,10 @@
 
   font-size: @font-size-small;
   line-height: @line-height-medium;
+
+  br {
+    display: none;
+  }
 }
 
 .search-hotel__search {
@@ -67,6 +71,10 @@
 }
 
 @media (min-width: @screen-medium-width) {
+  .search-hotel__content {
+    width: 500px;
+  }
+
   .search-hotel__title {
     margin: 20px 0;
     font-size: @font-size-extra-large;
@@ -74,6 +82,10 @@
 
   .search-hotel__text {
     margin: 5px 0;
+
+    br {
+      display: inline;
+    }
   }
 
   .search-hotel__search {
