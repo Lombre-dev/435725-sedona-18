@@ -1,17 +1,16 @@
-@import "./variables.less";
-
 .main__welcome {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 389px;
 
+  background-color: extract(@default-button-background-colors, 1);
   background-image:
     url("../img/intro/bg-intro-triangle-mobile.svg"),
     url("../img/intro/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 0% 100%, 50% 100%;
-  background-size: 100% 26px, auto;
+  background-size: 100% 26px, auto 389px;
 
   &--short {
     height: 158px;
@@ -48,9 +47,14 @@
     padding: 25px 20px 5px;
   }
 
-  &--photo,
-  &--photo2 {
+  &--photo {
     padding: 25px 25px 17.5px;
+  }
+
+  &--photo-second {
+    padding: 25px 25px 20px;
+
+    border-top: 1px solid @photo-item-border-color;
   }
 }
 
@@ -103,8 +107,8 @@
 
     &--form,
     &--photo,
-    &--photo2 {
-      padding: 62.5px 50px 55px;
+    &--photo-second {
+      padding: 62.5px 60px 57.5px;
 
       .main__heading {
         font-size: @font-size-extra-large;
@@ -115,8 +119,9 @@
       }
     }
 
-    &--photo2 {
-      padding: 55px 50px;
+    &--photo-second {
+      padding: 55px 60px 60px;
+      border-top: none;
     }
   }
 
@@ -125,7 +130,8 @@
   }
 
   .main__text {
-    margin-bottom: 12.5px;
+    margin-top: 17.5px;
+    margin-bottom: 10px;
   }
 }
 
@@ -143,7 +149,6 @@
     background-image:
       url("../img/intro/bg-intro-triangle-desktop.svg"),
       url("../img/intro/bg-back-desktop@1x.jpg");
-    background-size: 100% 57px, 100%;
 
     &--short {
       height: 300px;
@@ -152,15 +157,15 @@
 
   .main__container {
     &--form {
-      padding: 100px 50px 45px;
+      padding: 100px 50px 47.5px;
     }
 
     &--photo {
-      padding: 100px 50px 55px;
+      padding: 100px 60px 60px;
     }
 
-    &--photo2 {
-      padding: 60px 50px 55px;
+    &--photo-second {
+      padding: 60px 60px 57.5px;
     }
   }
 }

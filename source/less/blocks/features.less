@@ -1,5 +1,3 @@
-@import "./variables.less";
-
 .features {
   text-align: center;
   text-transform: uppercase;
@@ -33,6 +31,7 @@
   &--leading {
     .features__desc {
       padding-top: 75px;
+      padding-bottom: 45px;
 
       background-image: url("../img/features/bg-triangle.svg");
       background-repeat: no-repeat;
@@ -44,7 +43,7 @@
     background-color: @features-second-background-color;
 
     .features__desc {
-      padding: 25px 15px;
+      padding: 27.5px 15px;
       margin: 0 20px;
       border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
@@ -60,7 +59,7 @@
 .features__desc {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
 }
 
@@ -71,7 +70,8 @@
 }
 
 .features__order {
-  margin: 14.5px;
+  margin: 10px 0 15px;
+
   font-size: @font-size-small;
   line-height: @line-height-small;
 }
@@ -97,7 +97,11 @@
     &--main {
       .features__desc {
         width: 100% / 3;
-        padding: 40px;
+        padding: 45px;
+      }
+
+      .features__title {
+        padding: 0 8px;
       }
     }
 
@@ -112,9 +116,17 @@
 
       .features__desc {
         margin: 0;
-        padding: 40px 50px;
+        padding: 45px;
 
         border: 0;
+      }
+
+      .features__title {
+        padding: 0 20px;
+      }
+
+      .features__text--narrow {
+        padding: 0 10px;
       }
     }
   }
@@ -124,6 +136,9 @@
   }
 
   .features__photo-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100% / 3 * 2;
     height: 256px;
 
@@ -134,5 +149,41 @@
 
   .features__title {
     font-size: @font-size-large;
+  }
+
+  .features__order {
+    margin-bottom: 22.5px;
+  }
+}
+
+@media (min-width: @screen-large-width) {
+  .features__item {
+    &--main {
+      .features__desc {
+        padding: 50px 55px;
+      }
+
+      .features__title {
+        padding: 0 70px;
+      }
+
+      .features__text--narrow {
+        padding: 0 30px;
+      }
+    }
+
+    &--second {
+      .features__desc {
+        padding: 45px 50px;
+      }
+
+      .features__title {
+        padding: 0 80px;
+      }
+
+      .features__text--narrow {
+        padding: 0 15px;
+      }
+    }
   }
 }

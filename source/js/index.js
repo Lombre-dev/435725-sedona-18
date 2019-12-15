@@ -1,4 +1,4 @@
-var addMenuHandlers = function () {
+function addMenuHandlers() {
 
   var menu = document.querySelector(".header__menu");
   var nav = document.querySelector(".header__nav");
@@ -17,7 +17,13 @@ var addMenuHandlers = function () {
   });
 };
 
-addMenuHandlers();
+function showGoogleMap() {
+  var map = document.querySelector(".search-hotel__map--nojs");
+  if (!map) {
+    return;
+  }
+  map.classList.remove("search-hotel__map--nojs");
+}
 
 function openPopup(target) {
   document.querySelector(target).classList.remove("popup--closed");
@@ -26,3 +32,6 @@ function openPopup(target) {
 function closePopup(target) {
   document.querySelector(target).classList.add("popup--closed");
 }
+
+addMenuHandlers();
+showGoogleMap();

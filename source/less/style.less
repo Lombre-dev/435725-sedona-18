@@ -1,23 +1,24 @@
-@import "./variables.less";
-@import "./header.less";
-@import "./nav.less";
-@import "./main.less";
-@import "./features.less";
-@import "./places-list.less";
-@import "./search-hotel.less";
-@import "./photo.less";
-@import "./video.less";
-@import "./socials-list.less";
-@import "./copyright.less";
-@import "./footer.less";
-@import "./feedback.less";
+@import "./blocks/header.less";
+@import "./blocks/nav.less";
+@import "./blocks/main.less";
+@import "./blocks/features.less";
+@import "./blocks/places-list.less";
+@import "./blocks/search-hotel.less";
+@import "./blocks/photo.less";
+@import "./blocks/video.less";
+@import "./blocks/socials-list.less";
+@import "./blocks/copyright.less";
+@import "./blocks/footer.less";
+@import "./blocks/feedback.less";
 @import "./popup.less";
 @import "./button.less";
+@import "./mixins.less";
+@import "./variables.less";
 
 @font-face {
   font-family: "PT Sans";
   font-weight: normal;
-  font-display: swap;
+  // font-display: swap;
   src:
     url("../fonts/ptsans.woff2") format("woff2"),
     url("../fonts/ptsans.woff") format("woff");
@@ -26,7 +27,7 @@
 @font-face {
   font-family: "PT Sans";
   font-weight: bold;
-  font-display: swap;
+  // font-display: swap;
   src:
     url("../fonts/ptsansbold.woff2") format("woff2"),
     url("../fonts/ptsansbold.woff") format("woff");
@@ -40,7 +41,7 @@ html {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: inherit;
 }
 
 body {
@@ -58,7 +59,7 @@ body {
   box-shadow: 0 5px 15px 0 rgba(0, 1, 1, 0.2);
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;

@@ -1,13 +1,17 @@
-@import "./variables.less";
-@import "./mixins.less";
-
 .footer {
+  background-color: @footer-background-color;
+}
+
+.footer__wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  padding-top: 10px;
+  max-width: 960px;
   min-height: 120px;
+  width: 84.375%;
+  padding-top: 10px;
+  margin: 0 auto;
 }
 
 .footer__hashtag {
@@ -20,7 +24,7 @@
 }
 
 .footer__list {
-  margin: 20px;
+  margin: 15px 20px;
 }
 
 .footer__copyright {
@@ -28,11 +32,18 @@
   align-items: center;
   font-style: normal;
   font-weight: normal;
-  margin: 20px;
+  margin: 25px 20px;
 }
 
 @media (min-width: @screen-medium-width) {
-  .footer {
+  .footer__wrapper {
+    justify-content: space-between;
     padding: 0;
+  }
+
+  .footer__hashtag,
+  .footer__list,
+  .footer__copyright {
+    margin: 0;
   }
 }

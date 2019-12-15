@@ -1,10 +1,7 @@
-@import "./variables.less";
-@import "./mixins.less";
-
 .video__wrapper {
   width: 100%;
   max-width: 648px;
-  margin: 0 auto 45px;
+  margin: 0 auto 40px;
 }
 
 .video__content-wrapper {
@@ -54,7 +51,7 @@
 
 .video__timeline-seek {
   position: absolute;
-  left: 12%;
+  left: 42.5px;
 
   @size: 10px;
 
@@ -76,6 +73,10 @@
 
   border: 0;
   background-color: transparent;
+}
+
+.video__closed-caption {
+  padding: 22.5px 12.5px;
 }
 
 .video__replay {
@@ -105,13 +106,17 @@
     flex-wrap: nowrap;
     width: 100%;
     margin: 0;
-    padding: 15px;
+    padding: 12.5px 15px;
 
     background-color: @video-controls-second-background-color;
   }
 
   .video__timeline-wrapper {
     background: none;
+  }
+
+  .video__timeline-seek {
+    left: 115px;
   }
 
   .video__replay,
@@ -127,6 +132,6 @@
 
 @media (min-width: @screen-large-width) {
   .video__wrapper {
-    margin-bottom: 90px;
+    margin-bottom: 85px;
   }
 }
