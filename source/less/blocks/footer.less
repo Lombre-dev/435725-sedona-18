@@ -1,4 +1,6 @@
 .footer {
+  display: flex;
+
   background-color: @footer-background-color;
 }
 
@@ -10,11 +12,12 @@
   max-width: 960px;
   min-height: 120px;
   width: 84.375%;
-  padding-top: 10px;
+  padding-top: 12.5px;
   margin: 0 auto;
 }
 
 .footer__hashtag {
+
   .mixin-apply-link-colors(@default-link-colors);
 
   margin: 20px;
@@ -30,9 +33,9 @@
 .footer__copyright {
   display: flex;
   align-items: center;
-  font-style: normal;
-  font-weight: normal;
   margin: 25px 20px;
+
+  font-style: normal;
 }
 
 @media (min-width: @screen-medium-width) {
