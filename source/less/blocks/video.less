@@ -26,7 +26,10 @@
 }
 
 .video__timeline-wrapper {
+  z-index: 1;
+
   display: flex;
+  flex-grow: 1;
   width: 100%;
   height: 45px;
   padding: 0 20px;
@@ -52,12 +55,13 @@
 .video__timeline-seek {
   position: absolute;
   left: 42.5px;
+  top: 50%;
 
   @size: 10px;
 
   width: @size;
   height: @size;
-  transform: translate(-@size / 2, 0);
+  transform: translate(-@size / 2, -@size / 2);
 
   border: 0;
   border-radius: 50%;
@@ -113,6 +117,8 @@
   }
 
   .video__timeline-wrapper {
+    width: auto;
+
     background: none;
   }
 
