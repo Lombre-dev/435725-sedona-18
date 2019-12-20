@@ -33,6 +33,7 @@
       </picture>
     </a>
     <button class="header__menu header__menu--nojs" type="button">
+      <span class="visually-hidden">Открыть меню</span>
       <svg class="header__close-icon" width="22" height="22">
         <use href="./img/icons.svg#icon-cross"></use>
       </svg>
@@ -127,7 +128,7 @@
     </form>
 
     <div class="popup popup--closed" id="feedback-popup-success">
-      <div class="popup__body feedback__popup-success">
+      <div class="popup__body popup__body--large">
         <div class="popup__container popup__container--message">
           <p class="popup__heading"><strong>Ваш отзыв отправлен!</strong></p>
           <p class="popup__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
@@ -139,7 +140,7 @@
     </div>
 
     <div class="popup popup--closed" id="feedback-popup-failure">
-      <div class="popup__body feedback__popup-failure">
+      <div class="popup__body popup__body--medium">
         <div class="popup__container popup__container--message">
           <p class="popup__heading"><strong>Что-то пошло не так!</strong></p>
           <p class="popup__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>

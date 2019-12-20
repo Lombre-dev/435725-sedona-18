@@ -33,6 +33,7 @@
       </picture>
     </a>
     <button class="header__menu header__menu--nojs" type="button">
+      <span class="visually-hidden">Открыть меню</span>
       <svg class="header__close-icon" width="22" height="22">
         <use href="./img/icons.svg#icon-cross"></use>
       </svg>
@@ -41,7 +42,7 @@
       </svg>
     </button>
   </header>
-  <main>
+  <main class="main">
 
     <div class="main__welcome main__welcome--short">
       <img class="main__welcome-image main__welcome-image--short" src="./img/intro/text-sedona.svg" width="228" height="39" alt="Sedona">
@@ -52,7 +53,7 @@
       <p class="main__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
     </div>
 
-    <section>
+    <section class="photo">
       <h2 class="visually-hidden">Фотографии сделанные нашими гостями.</h2>
       <ul class="photo__list">
         <li class="photo__item photo__item--leading">
@@ -149,12 +150,12 @@
         </li>
       </ul>
     </section>
-    <section>
+    <div class="main__container main__container--photo-second">
+      <p class="main__heading"><strong>Все еще сомневаетесь?</strong></p>
+      <p class="main__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+    </div>
+    <section class="video">
       <h2 class="visually-hidden">Видеопрезентация поездки.</h2>
-      <div class="main__container main__container--photo-second">
-        <p class="main__heading"><strong>Все еще сомневаетесь?</strong></p>
-        <p class="main__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-      </div>
       <div class="video__wrapper">
         <div class="video__content-wrapper">
           <picture>
@@ -174,17 +175,17 @@
               <div class="video__timeline-seek"></div>
             </div>
           </div>
-          <button class="video__replay" type="button">
+          <button class="video__replay" type="button" title="Повторить" aria-label="Повторить">
             <svg width="16" height="20">
               <use href="./img/icons.svg#icon-video-replay"></use>
             </svg>
           </button>
-          <button class="video__closed-caption" type="button">
+          <button class="video__closed-caption" type="button" title="Субтитры" aria-label="Субтитры">
             <svg width="32" height="20">
               <use href="./img/icons.svg#icon-video-subtitles"></use>
             </svg>
           </button>
-          <button class="video__screen" type="button">
+          <button class="video__screen" type="button" title="На весь экран" aria-label="На весь экран">
             <svg width="20" height="20">
               <use href="./img/icons.svg#icon-video-fullscreen"></use>
             </svg>
