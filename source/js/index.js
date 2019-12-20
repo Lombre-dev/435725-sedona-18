@@ -4,6 +4,7 @@ function addMenuHandlers() {
   var nav = document.querySelector(".header__nav");
 
   menu.classList.remove("header__menu--nojs");
+  nav.classList.remove("header__nav--nojs");
 
   menu.addEventListener('click', function () {
     var activeClass = "header__menu--active";
